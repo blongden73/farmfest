@@ -1,0 +1,56 @@
+// $largeSize: calc(#{$largeNumer} + #{$unit});
+$multiplier:3;
+
+$large: 34px;
+$medium: 26px;
+$regular:20px;
+$base:18px;
+$small: 16px;
+$smallest: 11px;
+
+
+h1{
+    font-family: 'normalise_din_mnregular';
+	font-weight: normal;
+}
+
+h2{
+	font-family: 'normalise_din_mnregular';
+	font-weight: normal;
+}
+
+h3{
+	font-family: 'normalise_din_mnregular';
+	font-weight: normal;
+	color: $primary-colour;
+}
+
+h4{
+	font-family: 'Libre Baskerville', serif;
+	font-weight: normal;
+}
+
+p{
+	font-family: 'Libre Baskerville', serif;
+	font-weight: normal;
+}
+
+a{
+	font-style: italic;
+	text-decoration: underline;
+	color: inherit;
+}
+
+
+
+@font-face {
+    font-family: 'normalise_din_mnregular';
+    src: url('fonts/normalise_din_mn-webfont.eot');
+    src: url('fonts/normalise_din_mn-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/normalise_din_mn-webfont.woff2') format('woff2'),
+         url('fonts/normalise_din_mn-webfont.woff') format('woff'),
+         url('fonts/normalise_din_mn-webfont.ttf') format('truetype'),
+         url('fonts/normalise_din_mn-webfont.svg#normalise_din_mnregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

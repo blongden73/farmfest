@@ -1,0 +1,49 @@
+<div class="line__up__wrapper">
+	<ul class="friday">
+		<div class="line__up__day">
+			<h1>Friday</h1>
+		</div>
+<?php query_posts('cat=11'); ?>
+
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<div class="post--wrapper">
+				<div class="line-up__image">
+					<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+				</div>
+				<h1><?php the_title(); ?></h1>	
+			</div>			
+		</li>
+<?php endwhile; else: ?>
+
+	<p>Sorry, there are no posts to display</p>
+
+<?php endif; ?>
+	</ul>
+	<?php rewind_posts(); ?>
+	
+	<ul class="saturday">
+		<div class="line__up__day">
+			<h1>Saturday</h1>
+		</div>
+<?php query_posts('cat=12'); ?>
+
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<div class="post--wrapper">
+				<div class="line-up__image">
+					<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+				</div>
+				<h1><?php the_title(); ?></h1>	
+			</div>			
+		</li>
+<?php endwhile; else: ?>
+
+	<p>Sorry, there are no posts to display</p>
+
+<?php endif; ?>
+	</ul>
+	<?php rewind_posts(); ?>
+	
+	
+</div>
