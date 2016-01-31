@@ -12,7 +12,7 @@
 <script src="<?php bloginfo('template_url') ?>/js/pop_up.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
 <body>
-	
+<div id="fb-root"></div>	
 <header class="mobile">
 	<div class="hamburger"></div>
 	<div class="page__title">
@@ -23,7 +23,7 @@
 	</div>
 </header>
 
-<div class="cookies">
+<div class="cookies desktop">
 	<div class="cookies__wrapper">
 		<h1>Sorry for the inconvenience, this site uses dem cookies.</h1>
 		<div class="close"></div>

@@ -2,7 +2,7 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php get_template_part('single_background') ?>
 	<div class="single__wrapper">
-		<div class="single__menu">
+		<div class="single__menu desktop">
 			<?php wp_nav_menu( array( 'theme_location' => 'sub-menu' ) ); ?>
 		</div>
 		<div class="single__content">

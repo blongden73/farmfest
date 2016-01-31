@@ -5,7 +5,7 @@
 ?>
 <?php get_header() ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php get_template_part('single_background') ?>
+<?php get_template_part('illustration__panel__contact') ?>
 <?php endwhile; else : ?>
 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>	
@@ -13,9 +13,6 @@
 
 <?php if( have_rows('tickets__prices') ): ?>
 	<div class="ticket__price__container">
-		<div class="ticket__price__right">
-			<h1>Prices</h1>
-		</div>
 		<div class="ticket__price__left">
 			<ul class="ticket__price__wrapper">
 		
@@ -23,6 +20,7 @@
 		
 				// vars
 				$stage_name = get_sub_field('stage_name');
+				$fri_sat = get_sub_field('fri_sat');
 				$price_one = get_sub_field('price_one');
 				$price_two = get_sub_field('price_two');
 				$price_three = get_sub_field('price_three');
@@ -36,17 +34,39 @@
 				?>
 		
 				<li class="ticket__price <?php if ($ticket_stage): ?> active <?php endif; ?>" >
-		
-					<h1><?php echo $stage_name; ?></h1>
-				    <h2><?php echo $price_one; ?></h2>
-				    <h2><?php echo $price_two; ?></h2>
-				    <h2><?php echo $price_three; ?></h2>
-				    <h2><?php echo $price_four; ?></h2>
-				    <h2><?php echo $price_five; ?></h2>
-				    <h2><?php echo $price_six; ?></h2>
-				    <h2><?php echo $price_seven; ?></h2>
-				    <h2><?php echo $price_eight; ?></h2>
-		
+					
+					<div class="prices__wrapper">
+						<h1 class="stage_name">
+							<?php echo $stage_name; ?>
+						</h1>
+						<h2 class="ticket_header">
+							<?php echo $fri_sat; ?>
+						</h2>
+					    <h2>
+						    <?php echo $price_one; ?>
+					    </h2>
+					    <h2>
+						    <?php echo $price_two; ?>
+						</h2>
+					    <h2>
+						    <?php echo $price_three; ?>
+					    </h2>
+					    <h2 class="ticket_header">
+						    <?php echo $price_four; ?>
+						</h2>
+					    <h2>
+						   	<?php echo $price_five; ?>
+						</h2>
+					    <h2>
+						    <?php echo $price_six; ?>
+						</h2>
+					    <h2 class="ticket_header">
+						   	<?php echo $price_seven; ?>
+						</h2>
+					    <h2>
+						   	<?php echo $price_eight; ?>
+						</h2>
+					</div>
 				</li>
 		
 			<?php endwhile; ?>

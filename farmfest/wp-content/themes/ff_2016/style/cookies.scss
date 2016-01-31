@@ -1,0 +1,31 @@
+@media screen and ($break-min: $break-desktop) {
+	.cookies{
+		background-color: $primary-colour;
+		height: 50px;
+		@include type(calc(#{$regular}));
+		position: fixed;
+		bottom:0px;
+		z-index: 200000;
+		width: 100%;
+		color: white;
+		
+		.cookies__wrapper{
+			@include width-desktop();
+			position: relative;
+		}
+		
+		h1{
+			width: 700px;
+		}
+		
+		.close{
+			float: right;
+			background-color: white;
+			height: 40px;
+			width: 40px;
+			position: absolute;
+			right: 0px;
+			bottom: -26px;
+		}
+	}
+}

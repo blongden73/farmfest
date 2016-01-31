@@ -112,6 +112,10 @@ $(function (){
 		$('header.desktop').addClass('coloured');
 	}
 	
+	if( pathnameFinal === 'ethos' || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	$('header.mobile').addClass('display');
+	}
+	
 	//mobile header overlay
 	$('.hamburger__menu').click(function(){
 		console.log("click")

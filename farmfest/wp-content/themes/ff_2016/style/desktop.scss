@@ -6,6 +6,9 @@
 		display: none;
 	}
 	
+	.desktop{
+		display: block;
+	}
 	
 	//Header
 	
@@ -354,7 +357,7 @@
 		z-index: -2000;
 		
 		img{
-			width: 120%;
+			width: 100%;
 		}
 	}
 	
@@ -989,38 +992,7 @@
 			}
 		}
 		
-	}
-	
-	.cookies{
-		background-color: $primary-colour;
-		height: 50px;
-		@include type(calc(#{$regular}));
-		position: fixed;
-		bottom:0px;
-		z-index: 200000;
-		width: 100%;
-		color: white;
-		
-		.cookies__wrapper{
-			@include width-desktop();
-			position: relative;
-		}
-		
-		h1{
-			width: 700px;
-		}
-		
-		.close{
-			float: right;
-			background-color: white;
-			height: 40px;
-			width: 40px;
-			position: absolute;
-			right: 0px;
-			bottom: -26px;
-		}
-	}
-	
+	}	
 	//this sets the height of the offset on the individual pages
 	.line-up, .latest{
 		padding-top: 130px;

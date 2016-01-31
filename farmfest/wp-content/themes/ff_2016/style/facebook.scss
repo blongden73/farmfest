@@ -1,9 +1,44 @@
-.facebook__temp{
-	background-color: $grey;
-	height: 200px;
-	.facebook__wrapper{
-		@include width-desktop();
-		height: 200px;
-	}
-}
-	
+@media screen and ($break-min: $break-desktop) {
+	.facebook__temp{
+		background-color: rgba(24, 24, 24, 0.95);
+		height: 100vh;
+		width: 100%;
+		top: 0;
+		position: fixed;
+		z-index: 3000000;
+		color: white;
+		display: none;
+		
+		&.display{
+			display: block;
+		}
+		
+		.close__facebook{
+			right: 20px;
+			top:20px;
+			background-color: white;
+			height: 20px;
+			width: 20px;
+			position: absolute;
+		}
+		
+		.facebook__wrapper{
+			@include width-desktop();
+			height: 200px;
+			margin-top: 20vw;
+			
+			h1{
+				width: max-content;
+				margin-left: auto;
+				margin-right: auto;
+				@include type(calc(#{$large}));
+			}
+		}
+		
+		.fb-page{
+			width: max-content;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}	
+}	
