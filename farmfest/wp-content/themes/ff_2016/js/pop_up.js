@@ -19,9 +19,21 @@ $(function () {
 			console.log('im here')
 			Cookies.set('Farmfest_pop', visited);
 			console.log('cookie_set');
+			console.log(cookie);
 		}	
+		
+		$( ".cookies__wrapper .close" ).click(function() {
+				console.log('clicking cookies');
+			$('.cookies').toggleClass('display');
+			Cookies.set('cookiePop', visited);
+			console.log('cookies set', cookiePop)
+		});	
+		
 		if(cookiePop != 'clicked'){
+			$('.cookies').removeClass('display');
+		}	
+		
 			
-		}
+		
 	}
 });

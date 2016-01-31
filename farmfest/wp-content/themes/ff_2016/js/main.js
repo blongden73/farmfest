@@ -105,6 +105,12 @@ $(function (){
 		}
 		ticketProviderClass();
 	}
+	
+	//click cross for pop up
+	$( ".close__facebook" ).click(function() {
+		console.log('clicking');
+		$('.facebook__temp').toggleClass('display');
+	});
 		
 	
 	//fix the coloured header for the line up page

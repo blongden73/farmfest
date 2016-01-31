@@ -102,6 +102,8 @@ a {
       header.desktop.coloured {
         background-color: white;
         color: #302784; }
+        header.desktop.coloured .desktop__logo h1 {
+          color: #302784; }
         header.desktop.coloured .desktop__logo svg path {
           fill: #302784; }
         header.desktop.coloured .desktop__options .section__divide {
@@ -122,7 +124,7 @@ a {
             text-decoration: none; }
     header .desktop__options {
       text-transform: uppercase;
-      width: 60%;
+      width: 55%;
       float: left;
       margin-top: 20px; }
       header .desktop__options .section__divide {
@@ -162,13 +164,19 @@ a {
       header .desktop__nav .desktop__logo {
         float: left;
         width: 20%; }
+        header .desktop__nav .desktop__logo h1 {
+          font-style: normal;
+          font-size: 34px;
+          margin-top: 30px;
+          margin-left: 20px; }
         header .desktop__nav .desktop__logo svg {
           width: 150px;
           height: 96px; }
       header .desktop__nav .desktop__buy {
         float: left;
         width: 20%;
-        height: 120px; }
+        height: 120px;
+        margin-left: 20px; }
         header .desktop__nav .desktop__buy .buy__button__desktop {
           background: none;
           border: 3px white solid;
@@ -621,7 +629,7 @@ a {
       float: left; }
   footer {
     background-color: #302784;
-    height: 50vh;
+    height: 610px;
     margin-top: 0px; }
     footer .footer__wrapper {
       width: 1200px;
@@ -1320,10 +1328,13 @@ a {
     .facebook__temp .close__facebook {
       right: 20px;
       top: 20px;
-      background-color: white;
       height: 20px;
       width: 20px;
-      position: absolute; }
+      position: absolute;
+      cursor: pointer; }
+      .facebook__temp .close__facebook svg {
+        height: 20px;
+        width: 20px; }
     .facebook__temp .facebook__wrapper {
       width: 1200px;
       margin-left: auto;
@@ -1341,7 +1352,9 @@ a {
     .facebook__temp .fb-page {
       width: max-content;
       margin-left: auto;
-      margin-right: auto; } }
+      margin-right: auto;
+      display: block;
+      margin-top: 30px; } }
 
 .ticket__provider__container {
   width: 1200px;
@@ -1492,14 +1505,18 @@ a {
     bottom: 0px;
     z-index: 200000;
     width: 100%;
-    color: white; }
+    color: white;
+    display: none; }
+    .cookies.display {
+      display: block; }
     .cookies .cookies__wrapper {
       width: 1200px;
       margin-left: auto;
       margin-right: auto;
       position: relative; }
     .cookies h1 {
-      width: 700px; }
+      width: 700px;
+      margin-top: 10px; }
     .cookies .close {
       float: right;
       background-color: white;

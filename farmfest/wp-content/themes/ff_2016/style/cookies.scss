@@ -8,6 +8,11 @@
 		z-index: 200000;
 		width: 100%;
 		color: white;
+		display: none;
+		
+		&.display{
+			display: block;
+		}
 		
 		.cookies__wrapper{
 			@include width-desktop();
@@ -16,6 +21,7 @@
 		
 		h1{
 			width: 700px;
+			margin-top: 10px;
 		}
 		
 		.close{

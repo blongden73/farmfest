@@ -10,6 +10,7 @@
 <script src="<?php bloginfo('template_url') ?>/js/stellar.js/src/jquery.stellar.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/js.cookie.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/pop_up.js"></script>
+<script src="<?php bloginfo('template_url') ?>/js/facebook.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
 <body>
 <div id="fb-root"></div>	
@@ -23,7 +24,7 @@
 	</div>
 </header>
 
-<div class="cookies desktop">
+<div class="cookies desktop display">
 	<div class="cookies__wrapper">
 		<h1>Sorry for the inconvenience, this site uses dem cookies.</h1>
 		<div class="close"></div>
@@ -35,12 +36,12 @@
 	<div class="desktop__nav">
 		<a href="<?php bloginfo('url')?>">
 		<div class="desktop__logo">
-		<?php get_template_part('ff__logo') ?>
+		<h1>Farmfest 2016</h1>
 		</div>
 		</a>
 		
 		<div class="desktop__options">
-			<h1>farmfest | somerset | July - July 2016</h1>
+			<h1>29th & 30th JULY 2016, GILCOMBE FARM, SOMERSET, UK</h1>
 			<div class="section__divide"></div>
 			<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 		</div>	

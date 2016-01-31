@@ -31,6 +31,11 @@
 				color: $primary-colour;
 				
 				.desktop__logo{
+					
+					h1{
+						color: $primary-colour;
+					}
+					
 					svg{
 						path{
 						fill: $primary-colour;
@@ -77,7 +82,7 @@
 		
 		.desktop__options{
 			text-transform: uppercase;
-		    width: 60%;
+		    width: 55%;
 		    float: left;
 		    margin-top: 20px;
 		    
@@ -111,7 +116,7 @@
 					 
 					 a{
 						 text-decoration: none;
-					 }
+					 }	 
 			 	}
 			 a{
 				 text-decoration: none;
@@ -127,6 +132,12 @@
 				float: left;
 				width: 20%;
 
+				h1{
+					font-style: normal;
+					font-size: $large;
+					margin-top: 30px;
+					margin-left: 20px;
+				}
 				
 				svg{
 					width: 150px;
@@ -139,6 +150,7 @@
 				float: left;
 			    width: 20%;
 				height: 120px;
+				margin-left: 20px;
 				
 				.buy__button__desktop{
 					@include button();
@@ -159,8 +171,10 @@
 				float: left;
 				font-size: calc(#{$regular});
 				margin-right: 20px;
-			}	
+			}
+				
 		}
+		
 		
 		h1{
 			font-size: calc(#{$medium});
@@ -782,7 +796,7 @@
 	
 	footer{
 		background-color: $primary-colour;
-		height: 50vh;
+		height: 610px;
 		margin-top: 0px;
 		
 		.footer__wrapper{
