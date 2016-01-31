@@ -56,7 +56,7 @@ $(function (){
 	
 	//styles ticket numbers
 	if($('.tickets').length){
-		var ticketPrices = $('li.ticket__price h2'); 
+		var ticketPrices = $('li.ticket__price p'); 
 		for(i = 0; i < ticketPrices.length; i++){
 			function ticketFormat(){
 				console.log('running');
@@ -108,7 +108,7 @@ $(function (){
 		
 	
 	//fix the coloured header for the line up page
-	if(pathnameFinal === 'line-up' || pathnameFinal === 'latest'){
+	if(pathnameFinal === 'line-up' || pathnameFinal === 'latest' || pathnameFinal === 'tickets'){
 		$('header.desktop').addClass('coloured');
 	}
 	

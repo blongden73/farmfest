@@ -4,11 +4,36 @@
  */
 ?>
 <?php get_header() ?>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php get_template_part('illustration__panel__contact') ?>
-<?php endwhile; else : ?>
-	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-<?php endif; ?>	
+<?php get_template_part('illustration__panel__tickets') ?>
+
+<?php if( have_rows('tickets__provider') ): ?>
+	<div class="ticket__provider__container">
+		<div class="ticket__provider__left">
+			<ul class="ticket__provider__wrapper">
+		
+			<?php while( have_rows('tickets__provider') ): the_row(); 
+		
+				// vars
+				$ticket__image = get_sub_field('image');
+				$ticket__title = get_sub_field('title');
+				$ticket__price = get_sub_field('price');
+				$ticket__link = get_sub_field('link');
+				?>
+		
+				<li class="ticket__provider">
+		
+					<img src="<?php echo $ticket__image['url']; ?>" alt="<?php echo $ticket__image['alt'] ?>" />
+					<h1><?php echo $ticket__title; ?></h1>
+				    <p><?php echo $ticket__price; ?></p>
+				    <a href="$ticket__link"><h2>Buy Now</h2></a>
+		
+				</li>
+		
+			<?php endwhile; ?>
+			</ul>
+		</div>	
+	</div>
+<?php endif; ?>
 <?php rewind_posts(); ?>
 
 <?php if( have_rows('tickets__prices') ): ?>
@@ -42,30 +67,30 @@
 						<h2 class="ticket_header">
 							<?php echo $fri_sat; ?>
 						</h2>
-					    <h2>
+					    <p>
 						    <?php echo $price_one; ?>
-					    </h2>
-					    <h2>
+					    </p>
+					    <p>
 						    <?php echo $price_two; ?>
-						</h2>
-					    <h2>
+						</p>
+					    <p>
 						    <?php echo $price_three; ?>
-					    </h2>
+					    </p>
 					    <h2 class="ticket_header">
 						    <?php echo $price_four; ?>
 						</h2>
-					    <h2>
+					    <p>
 						   	<?php echo $price_five; ?>
-						</h2>
-					    <h2>
+						</p>
+					    <p>
 						    <?php echo $price_six; ?>
-						</h2>
+						</p>
 					    <h2 class="ticket_header">
 						   	<?php echo $price_seven; ?>
 						</h2>
-					    <h2>
+					    <p>
 						   	<?php echo $price_eight; ?>
-						</h2>
+						</p>
 					</div>
 				</li>
 		
@@ -76,37 +101,5 @@
 <?php endif; ?>
 <?php rewind_posts(); ?>
 
-
-<?php if( have_rows('tickets__provider') ): ?>
-	<div class="ticket__provider__container">
-		<div class="ticket__provider__right">
-			<h1>Provider</h1>
-		</div>
-		<div class="ticket__provider__left">
-			<ul class="ticket__provider__wrapper">
-		
-			<?php while( have_rows('tickets__provider') ): the_row(); 
-		
-				// vars
-				$ticket__image = get_sub_field('image');
-				$ticket__title = get_sub_field('title');
-				$ticket__price = get_sub_field('price');
-		
-				?>
-		
-				<li class="ticket__provider">
-		
-					<img src="<?php echo $ticket__image['url']; ?>" alt="<?php echo $ticket__image['alt'] ?>" />
-					<h1><?php echo $ticket__title; ?></h1>
-				    <p><?php echo $ticket__price; ?></p>
-		
-				</li>
-		
-			<?php endwhile; ?>
-			</ul>
-		</div>	
-	</div>
-<?php endif; ?>
-<?php rewind_posts(); ?>
 
 <?php get_footer() ?>

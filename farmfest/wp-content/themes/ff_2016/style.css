@@ -522,6 +522,7 @@ a {
           min-height: 130px;
           position: absolute;
           width: 100%;
+          height: 310px !important;
           background-color: #302784; }
           .line__up__wrapper ul li.category-large .line-up__image:hover img {
             opacity: 0.2; }
@@ -781,9 +782,9 @@ a {
         .single__wrapper .single__content blockquote:before {
           content: url("http://localhost/wp-content/uploads/2016/01/lightening_quote.png");
           margin-right: 20px; }
-  .line-up, .latest {
+  .line-up, .latest, .tickets {
     padding-top: 130px; }
-    .line-up .desktop, .latest .desktop {
+    .line-up .desktop, .latest .desktop, .tickets .desktop {
       margin-top: -130px; } }
 
 @media screen and (max-device-width: 320px) {
@@ -1346,13 +1347,14 @@ a {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 60px; }
   .ticket__provider__container .ticket__provider__right {
     float: left;
     overflow: hidden;
     width: 200px; }
   .ticket__provider__container .ticket__provider__left {
-    width: 1000px;
+    width: 100%;
     overflow: hidden;
     float: left; }
     .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper {
@@ -1362,10 +1364,28 @@ a {
       overflow: hidden; }
       .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider {
         float: left;
-        border: 2px rgba(0, 18, 255, 0.3) solid;
         margin-right: 1%;
-        margin-top: 10px;
-        width: 21%; }
+        width: 21%;
+        background-color: #f7f7f7;
+        padding-bottom: 30px;
+        min-height: 380px;
+        position: relative; }
+        .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider:hover a {
+          color: #302784; }
+        .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider a {
+          font-style: normal; }
+        .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider h1 {
+          font-size: calc(34px);
+          margin-left: 10px;
+          margin-bottom: 10px;
+          margin-top: 10px; }
+        .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider p {
+          margin-left: 10px; }
+        .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider h2 {
+          font-size: calc(26px);
+          position: absolute;
+          bottom: 10px;
+          left: 10px; }
         .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider.col1 {
           width: 80%;
           margin-left: auto;
@@ -1380,7 +1400,7 @@ a {
           width: 21%;
           margin-right: 1%; }
         .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider img {
-          width: 50%;
+          width: 100%;
           display: block;
           margin-left: auto;
           margin-right: auto; }
@@ -1389,7 +1409,8 @@ a {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 60px; }
   .ticket__price__container .ticket__illustration {
     position: absolute; }
     .ticket__price__container .ticket__illustration svg path {
@@ -1420,6 +1441,8 @@ a {
           font-size: calc(26px);
           width: 98%;
           padding-left: 2.5%; }
+        .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .prices__wrapper p {
+          margin-left: 2%; }
         .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .stage_name {
           color: #302784;
           font-family: 'normalise_din_mnregular';
@@ -1428,14 +1451,16 @@ a {
           font-style: normal !important;
           margin-bottom: 20px;
           text-transform: uppercase;
-          margin-left: 2%; }
+          margin-left: 2%;
+          margin-top: 20px; }
         .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .ticket_header {
           color: #302784;
           width: 100%;
           border-top: 2px #302784 dashed;
           padding: 10px 0px 10px 0px;
           border-bottom: 2px #302784 dashed;
-          margin-top: 10px; }
+          margin-top: 10px;
+          margin-bottom: 10px; }
         .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price.col1 {
           width: 80%;
           margin-left: auto;

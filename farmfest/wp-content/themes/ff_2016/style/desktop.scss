@@ -615,6 +615,7 @@
 					
 					.line-up__image{
 					@include line-up-image(310px, 130px);
+					height: 310px !important;
 					background-color: $primary-colour;
 					
 					
@@ -994,7 +995,7 @@
 		
 	}	
 	//this sets the height of the offset on the individual pages
-	.line-up, .latest{
+	.line-up, .latest, .tickets{
 		padding-top: 130px;
 		
 		.desktop{
