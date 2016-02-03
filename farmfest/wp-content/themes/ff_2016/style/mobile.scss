@@ -39,15 +39,27 @@
 			float: left;
 			text-align: right;
 			padding-right: 2%;
+			
+			a{
+				text-decoration: none;
+				font-style: normal;
+				
+				h1{
+					font-size: calc(#{$large} * #{$multiplier});
+					color: white;
+				}
+			}
+			
 		}
 		
 		.sub__nav{
 			background-color: $grey;
-			height: 200px;
+			height: 104px;
 			overflow: hidden;
 			float: left;
 			width: 100%;
 			display: none;
+			text-transform: uppercase;
 			
 			&.display{
 				display: block;
@@ -61,8 +73,17 @@
 				width: 100px;
 				height: 100px;
 				float: right;
-				background-color: blue;
 				
+				&.open{
+						-ms-transform: rotate(180deg); /* IE 9 */
+						-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+						transform: rotate(180deg);
+					}
+				
+				svg{
+					height: 80px;
+					width: 80px;
+				}
 			}
 			
 			ul{
@@ -87,7 +108,7 @@
 		
 		&.mobile{
 			position: fixed;
-			display: none;
+			display: block;
 		}
 		
 		&.display{
@@ -96,14 +117,45 @@
 	
 	}
 	
+	.about{
+			header{
+			.sub__nav{
+				display: block;
+				margin-top: -11px;
+			}	
+			}
+		}
+	
 	.hamburger__menu{
 		position: fixed;
 		top: 20px;
 		left: 20px;
-		background-color: white;
+		background-color: transparent;
 		width: 100px;
 		height: 100px;
 		z-index: 30000;
+		
+		svg{
+			width: 60px;
+			height: 60px;
+			
+			&.hamburger__close{
+				display: none;
+			}
+		}
+		
+		&.clicked{
+			svg{
+				&.hamburger_button{
+					display: none;
+				}
+				
+				&.hamburger__close{
+					display: block;
+				}
+			}
+		}
+		
 	}
 	
 	.hamburger__overlay{
@@ -120,12 +172,20 @@
 		
 		ul{
 			@include width-mobile();
-			font-size: calc(#{$large} * #{$multiplier});
+			@include type(calc(#{$large} * #{$multiplier}));
 			color: white;
 			margin-top: 30vh;
 			
 			li{
 			text-align: center;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+				
+				a{
+					text-decoration: none;
+					font-style: normal;
+				}
+			
 			}
 		}
 	}
@@ -206,6 +266,10 @@
 		padding-top: 1vh;
 		display: block;
 		
+		a{
+			text-decoration: none;
+		}
+		
 		button{
 			background: none;
 		    border: 12px white solid;
@@ -248,7 +312,7 @@
 	.illustration__panel--photos{
 		padding-top: 300px;
 		height: 520px;
-		margin-top: -280px;
+		margin-top: -370px;
 		
 		img{
 			width: 100%;
@@ -547,6 +611,21 @@
 					}
 				}
 				
+				&.category-mini{
+					height: 183px;;
+					
+					.post--wrapper{
+						min-height: 272px;
+						
+						a{
+							h1{
+								font-size: calc(#{$small} * #{$multiplier});
+							}
+						}
+					}
+					
+				}
+				
 								
 				&.last-medium{
 					    float: left;
@@ -594,6 +673,14 @@
 		width: 100%;
 		@include width-mobile();
 			
+		
+		.video{
+			iframe{
+				width: 99.7%;
+				margin-left: 0px;
+			}
+		}	
+			
 		img{
 			width: 49.3%;
 			margin-left: 0.5%;
@@ -604,7 +691,7 @@
 	
 		//single
 	
-	.single__background__image{
+	#single__background__image{
 		background: no-repeat center fixed $primary-colour;
 		background-position-y: -400px;
 		height: 500px;
@@ -613,6 +700,7 @@
 	    -o-background-size: cover;
 	    background-size: cover;
 	    position: relative;
+	    margin-top: -0px;
 	    
 	    .single__title__wrapper{
 	    	position: absolute;
@@ -629,15 +717,24 @@
 	    
 	}
 	
-	.single__wrapper{
+	#single__wrapper{
 		@include width-mobile();
-		margin-top: 20px;
+		margin-top: 40px;
 		font-size: calc(#{$small} * #{$multiplier});
 		line-height: calc(#{$regular} * #{$multiplier});
 		overflow: auto;
 		
+		.category-news{
+			margin-top: -220px;
+		}
+		
 		.single__image{
 			margin-bottom: 20px;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			height: 450px;
+			
 			img{
 				width: 100%;
 				height: auto;
@@ -669,7 +766,7 @@
 		}
 		
 		.single__content{
-			@include width-mobile();
+			width: 100%;
 			float: left;
 			margin-bottom: 20px;
 			
@@ -720,6 +817,134 @@
 			}
 		}
 		
+		&.category-news, &.category-feature{
+			margin-top: -150px;
+			
+			.single__title{
+				display: none;
+			}
+			
+			.single__menu{
+				width: 260px;
+				height: 300px;
+				margin-top: -103px;
+				
+				.next-previous{
+					&.line-up-next{
+						display: none;
+					}
+					
+					&.news-next{
+						display: block;
+					}
+					
+					svg{
+						path{
+							fill: $primary-colour;
+						}
+					}	
+				}
+				
+				.menu{
+					display: none;
+					}
+			}
+			
+			.single__image{
+			width: 100%;
+			margin-bottom: 20px;
+			position: relative;
+			min-height: 40px;
+			margin-left: auto;
+			margin-right: auto;
+			height: 450px;
+			overflow: hidden;
+			display: block;
+			}
+
+		}
+		
+	}
+	
+	//manifesto
+	
+	.manifesto{
+		position: absolute;
+		bottom: 50px;
+		z-index: 9000000;
+		width: 100%;
+		text-align: center;
+		@include type(calc(#{$medium} * #{$multiplier}));
+		cursor: pointer;
+		text-transform: uppercase;
+		
+		
+		&:hover{
+			h2{
+				text-decoration: underline;
+			}
+		}
+		
+	}
+	
+	.manifesto__wrapper{
+		background-color: $color-opacity;
+		height: 100vh;
+		position: fixed;
+		width: 100%;
+		z-index: 10000000;
+		display: none;
+		
+		&.display{
+			display: block;
+		}
+		
+		.manifesto__close{
+			position: absolute;
+			right: 40px;
+			top:40px;
+			cursor: pointer;
+			
+			svg{
+				width: 40px;
+				height: 40px;
+			}
+			
+		}
+		
+		.manifesto__container{
+			margin-left: auto;
+			margin-right: auto;
+			@include width-mobile();
+			color: white;
+			text-align: center;
+			margin-top: 200px;
+			
+			h1{
+				
+				font-size: calc(#{$large} * #{$multiplier}) ;
+				margin-bottom: 20px;
+				
+			}
+			
+			p{	
+				font-size: calc(#{$regular} * #{$multiplier}) ;
+				line-height: calc(#{$regular} * #{$multiplier});
+			}
+			
+			h2{
+				margin-bottom: 20px;
+			}
+			
+			a{
+				font-size: $small;
+				margin-top: 20px;
+			}
+		}
+	}
+	
+	.mailchimp__wrapper{
+		display: none;
 	}
 	
 	.ethos, .line-up .latest{
@@ -744,5 +969,21 @@
 			}
 		
 	}
+	
+	.line-up, .latest, .tickets, .about{
+		padding-top: 170px;
+		
+		header.mobile{
+			margin-top: -170px;
+		}
+		
+		#single__background__image{
+			margin-top: 0px;
+		}
+		
+		.illustration__container{
+			    margin-top: -81px;
+		}
+	}	
 
 }

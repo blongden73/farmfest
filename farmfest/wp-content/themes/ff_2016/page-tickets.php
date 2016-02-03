@@ -22,10 +22,10 @@
 		
 				<li class="ticket__provider">
 		
-					<img src="<?php echo $ticket__image['url']; ?>" alt="<?php echo $ticket__image['alt'] ?>" />
+					<a href="<?php echo $ticket__link; ?>"><img src="<?php echo $ticket__image['url']; ?>" alt="<?php echo $ticket__image['alt'] ?>" /></a>
 					<h1><?php echo $ticket__title; ?></h1>
 				    <p><?php echo $ticket__price; ?></p>
-				    <a href="$ticket__link"><h2>Buy Now</h2></a>
+				    <a href="<?php echo $ticket__link; ?>"><h2>Buy Now</h2></a>
 		
 				</li>
 		

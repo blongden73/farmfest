@@ -2,18 +2,18 @@
 	<div class="footer__wrapper">
 		<div class="social__media">
 			<ul>
-				<li>
+				<a href="https://www.facebook.com/Farmfestival"><li>
 				<?php get_template_part('facebook') ?>
-				</li>
-				<li>
+				</li></a>
+				<a href="https://twitter.com/Farmfestival"><li>
 				<?php get_template_part('twitter') ?>
-				</li>
-				<li>
+				</li></a>
+				<a href="https://www.instagram.com/farmfestuk/"><li>
 				<?php get_template_part('instagram') ?>
-				</li>
-				<li>
+				</li></a>
+				<a href="https://vimeo.com/user19052844"><li>
 				<?php get_template_part('vimeo') ?>
-				</li>
+				</li></a>
 			</ul>
 		</div>
 		<div class="cta">

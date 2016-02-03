@@ -149,13 +149,17 @@ $(function (){
 	//mobile header overlay
 	$('.hamburger__menu').click(function(){
 		console.log("click")
+		$('.hamburger__menu').toggleClass('clicked');
 		$('.hamburger__overlay').toggleClass('display');
 	});
+	
+	//
 	
 	//mobile sub nav{
 	$('.open__close').click(function(){
 		console.log('click')
 		$('.sub__nav').toggleClass('open');
+		$(this).toggleClass('open');
 	});
 	
 	//bind lightbox to elements

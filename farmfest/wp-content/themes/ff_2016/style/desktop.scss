@@ -239,7 +239,7 @@
 		position: fixed;
 		top: 20px;
 		left: 20px;
-		background-color: white;
+		background-color: transparent;
 		width: 100px;
 		height: 100px;
 		z-index: 30000;
@@ -1051,7 +1051,12 @@
 					
 					li{
 						float: left;
-						width: 200px
+						width: 200px;
+						
+						a{
+						text-decoration: none;
+						font-style: normal;
+						}
 					}
 				}
 			}
@@ -1205,8 +1210,7 @@
 			overflow: hidden;
 			display: block;
 			}
-			
-			
+
 		}
 		
 		&.category-line-up{

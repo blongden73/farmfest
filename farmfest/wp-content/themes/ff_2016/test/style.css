@@ -2594,7 +2594,7 @@ a {
     position: fixed;
     top: 20px;
     left: 20px;
-    background-color: white;
+    background-color: transparent;
     width: 100px;
     height: 100px;
     z-index: 30000; }
@@ -3164,6 +3164,9 @@ a {
           footer .footer__wrapper .cta ul li {
             float: left;
             width: 200px; }
+            footer .footer__wrapper .cta ul li a {
+              text-decoration: none;
+              font-style: normal; }
       footer .footer__wrapper .social__media {
         border-bottom: 1px solid white;
         overflow: auto;
@@ -3422,6 +3425,152 @@ a {
       margin-top: -170px; } }
 
 @media screen and (max-device-width: 375px) {
+  .ticket__provider__container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 96%;
+    overflow: hidden;
+    margin-bottom: 60px; }
+    .ticket__provider__container .ticket__provider__right {
+      float: left;
+      overflow: hidden;
+      width: 200px; }
+    .ticket__provider__container .ticket__provider__left {
+      width: 100%;
+      overflow: hidden;
+      float: left; }
+      .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden; }
+        .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider {
+          float: left;
+          margin-right: 1%;
+          width: 21%;
+          background-color: #f7f7f7;
+          padding-bottom: 30px;
+          min-height: 380px;
+          position: relative; }
+          .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider:hover a {
+            color: #302784; }
+          .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider a {
+            font-style: normal; }
+          .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider h1 {
+            font-size: calc(34px * 3);
+            margin-left: 10px;
+            margin-bottom: 10px;
+            margin-top: 10px; }
+          .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider p {
+            font-size: calc(18px * 3);
+            margin-left: 10px;
+            margin-bottom: 90px; }
+          .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider h2 {
+            font-size: calc(26px * 3);
+            position: absolute;
+            bottom: 10px;
+            left: 10px; }
+          .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider.col1 {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto; }
+          .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider.col2 {
+            width: 48.5%;
+            margin-right: 1%; }
+          .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider.col3 {
+            width: 100%;
+            margin-right: 1%;
+            margin-bottom: 20px; }
+          .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider.col4 {
+            width: 21%;
+            margin-right: 1%; }
+          .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider img {
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto; }
+  .ticket__price__container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 96%;
+    overflow: hidden;
+    margin-bottom: 60px; }
+    .ticket__price__container .ticket__illustration {
+      position: absolute; }
+      .ticket__price__container .ticket__illustration svg path {
+        fill: grey; }
+    .ticket__price__container .ticket__price__right {
+      float: left;
+      overflow: hidden;
+      width: 200px; }
+    .ticket__price__container .ticket__price__left {
+      margin-left: auto;
+      margin-right: auto;
+      width: 96%;
+      overflow: hidden;
+      float: left; }
+      .ticket__price__container .ticket__price__left ul.ticket__price__wrapper {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        margin-top: 20px; }
+        .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price {
+          float: left;
+          border: 3px #302784 solid;
+          margin-right: 2px;
+          margin-top: 10px;
+          opacity: 0.3; }
+          .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .prices__wrapper h2 {
+            font-size: calc(26px * 3);
+            width: 98%;
+            padding-left: 2.5%; }
+          .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .prices__wrapper p {
+            font-size: calc(18px * 3);
+            margin-left: 2%; }
+          .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .stage_name {
+            color: #302784;
+            font-family: 'normalise_din_mnregular';
+            font-weight: normal;
+            font-size: calc(34px * 3);
+            font-style: normal !important;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            margin-left: 2%;
+            margin-top: 20px; }
+          .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .ticket_header {
+            color: #302784;
+            width: 100%;
+            border-top: 2px #302784 dashed;
+            padding: 10px 0px 10px 0px;
+            border-bottom: 2px #302784 dashed;
+            margin-top: 10px;
+            margin-bottom: 10px; }
+          .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price.col1 {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto; }
+          .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price.col2 {
+            width: 48.5%;
+            margin-right: 1%; }
+          .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price.col3 {
+            width: 100%;
+            margin-right: 1%; }
+          .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price.col4 {
+            width: 99%;
+            margin-right: 0%;
+            margin-bottom: 40px; }
+          .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price.active {
+            border: 4px #302784 solid;
+            margin-top: 0px;
+            padding-bottom: 20px;
+            opacity: 1; }
+  .tickets_small_print {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto; } }
+
+@media screen and (max-device-width: 375px) {
   .mobile {
     display: block; }
   .desktop {
@@ -3446,13 +3595,20 @@ a {
       float: left;
       text-align: right;
       padding-right: 2%; }
+      header .page__title a {
+        text-decoration: none;
+        font-style: normal; }
+        header .page__title a h1 {
+          font-size: calc(34px * 3);
+          color: white; }
     header .sub__nav {
       background-color: #B0B0B0;
-      height: 200px;
+      height: 104px;
       overflow: hidden;
       float: left;
       width: 100%;
-      display: none; }
+      display: none;
+      text-transform: uppercase; }
       header .sub__nav.display {
         display: block; }
       header .sub__nav.open {
@@ -3460,8 +3616,16 @@ a {
       header .sub__nav .open__close {
         width: 100px;
         height: 100px;
-        float: right;
-        background-color: blue; }
+        float: right; }
+        header .sub__nav .open__close.open {
+          -ms-transform: rotate(180deg);
+          /* IE 9 */
+          -webkit-transform: rotate(180deg);
+          /* Chrome, Safari, Opera */
+          transform: rotate(180deg); }
+        header .sub__nav .open__close svg {
+          height: 80px;
+          width: 80px; }
       header .sub__nav ul {
         overflow: auto;
         width: 600px;
@@ -3478,17 +3642,29 @@ a {
             font-style: normal; }
     header.mobile {
       position: fixed;
-      display: none; }
+      display: block; }
     header.display {
       display: block; }
+  .about header .sub__nav {
+    display: block;
+    margin-top: -11px; }
   .hamburger__menu {
     position: fixed;
     top: 20px;
     left: 20px;
-    background-color: white;
+    background-color: transparent;
     width: 100px;
     height: 100px;
     z-index: 30000; }
+    .hamburger__menu svg {
+      width: 60px;
+      height: 60px; }
+      .hamburger__menu svg.hamburger__close {
+        display: none; }
+    .hamburger__menu.clicked svg.hamburger_button {
+      display: none; }
+    .hamburger__menu.clicked svg.hamburger__close {
+      display: block; }
   .hamburger__overlay {
     height: 100vh;
     width: 100%;
@@ -3502,11 +3678,19 @@ a {
       margin-left: auto;
       margin-right: auto;
       width: 96%;
+      font-family: 'normalise_din_mnregular';
+      font-weight: normal;
       font-size: calc(34px * 3);
+      font-style: normal !important;
       color: white;
       margin-top: 30vh; }
       .hamburger__overlay ul li {
-        text-align: center; }
+        text-align: center;
+        margin-bottom: 20px;
+        text-transform: uppercase; }
+        .hamburger__overlay ul li a {
+          text-decoration: none;
+          font-style: normal; }
   .carousel__wrapper {
     height: 76vh;
     background-color: blue;
@@ -3569,6 +3753,8 @@ a {
     background-color: #302784;
     padding-top: 1vh;
     display: block; }
+    .buy__button a {
+      text-decoration: none; }
     .buy__button button {
       background: none;
       border: 12px white solid;
@@ -3599,7 +3785,7 @@ a {
   .illustration__panel--photos {
     padding-top: 300px;
     height: 520px;
-    margin-top: -280px; }
+    margin-top: -370px; }
     .illustration__panel--photos img {
       width: 100%; }
   .illustration__panel--contact {
@@ -3798,6 +3984,12 @@ a {
               font-size: calc(20px * 3); }
           .line__up__wrapper ul li.category-medium .line-up__image {
             min-height: 259px; }
+        .line__up__wrapper ul li.category-mini {
+          height: 183px; }
+          .line__up__wrapper ul li.category-mini .post--wrapper {
+            min-height: 272px; }
+            .line__up__wrapper ul li.category-mini .post--wrapper a h1 {
+              font-size: calc(16px * 3); }
         .line__up__wrapper ul li.last-medium {
           float: left;
           width: 100%;
@@ -3822,11 +4014,14 @@ a {
     margin-left: auto;
     margin-right: auto;
     width: 96%; }
+    .photo__gallery__wrapper .video iframe {
+      width: 99.7%;
+      margin-left: 0px; }
     .photo__gallery__wrapper img {
       width: 49.3%;
       margin-left: 0.5%;
       float: left; }
-  .single__background__image {
+  #single__background__image {
     background: no-repeat center fixed #302784;
     background-position-y: -400px;
     height: 500px;
@@ -3834,57 +4029,62 @@ a {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    position: relative; }
-    .single__background__image .single__title__wrapper {
+    position: relative;
+    margin-top: -0px; }
+    #single__background__image .single__title__wrapper {
       position: absolute;
       bottom: 20px;
       color: white;
       width: 100%;
       font-size: calc(34px * 3); }
-      .single__background__image .single__title__wrapper .single__title {
+      #single__background__image .single__title__wrapper .single__title {
         margin-left: auto;
         margin-right: auto;
         width: 96%; }
-  .single__wrapper {
+  #single__wrapper {
     margin-left: auto;
     margin-right: auto;
     width: 96%;
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: calc(16px * 3);
     line-height: calc(20px * 3);
     overflow: auto; }
-    .single__wrapper .single__image {
-      margin-bottom: 20px; }
-      .single__wrapper .single__image img {
+    #single__wrapper .category-news {
+      margin-top: -220px; }
+    #single__wrapper .single__image {
+      margin-bottom: 20px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      height: 450px; }
+      #single__wrapper .single__image img {
         width: 100%;
         height: auto;
         display: block; }
-    .single__wrapper .single__menu {
+    #single__wrapper .single__menu {
       width: 200px;
       float: left; }
-      .single__wrapper .single__menu ul li {
+      #single__wrapper .single__menu ul li {
         font-family: 'normalise_din_mnregular';
         font-weight: normal;
         font-size: calc(34px * 3);
         font-style: normal !important;
         margin-top: 10px; }
-        .single__wrapper .single__menu ul li a {
+        #single__wrapper .single__menu ul li a {
           font-style: normal;
           text-decoration: none;
           color: #302784; }
-          .single__wrapper .single__menu ul li a:hover {
+          #single__wrapper .single__menu ul li a:hover {
             color: #B0B0B0; }
-    .single__wrapper .single__content {
-      margin-left: auto;
-      margin-right: auto;
-      width: 96%;
+    #single__wrapper .single__content {
+      width: 100%;
       float: left;
       margin-bottom: 20px; }
-      .single__wrapper .single__content ul {
+      #single__wrapper .single__content ul {
         margin-top: 20px;
         margin-bottom: 20px;
         margin-left: 20px; }
-      .single__wrapper .single__content li {
+      #single__wrapper .single__content li {
         list-style: url("http://localhost/wp-content/uploads/2016/01/lightening.png");
         font-family: 'normalise_din_mnregular';
         font-weight: normal;
@@ -3892,19 +4092,19 @@ a {
         font-style: normal !important;
         color: #302784;
         margin-top: 5px; }
-      .single__wrapper .single__content img {
+      #single__wrapper .single__content img {
         width: 100%;
         height: auto;
         margin: 10px 0px 0px 0px; }
-      .single__wrapper .single__content .wp-caption {
+      #single__wrapper .single__content .wp-caption {
         width: 100% !important; }
-      .single__wrapper .single__content .wp-caption-text {
+      #single__wrapper .single__content .wp-caption-text {
         color: #B0B0B0;
         margin-bottom: 20px; }
-      .single__wrapper .single__content blockquote {
+      #single__wrapper .single__content blockquote {
         margin-top: 20px;
         margin-left: 0px; }
-        .single__wrapper .single__content blockquote p {
+        #single__wrapper .single__content blockquote p {
           font-family: 'normalise_din_mnregular';
           font-weight: normal;
           font-size: calc(34px * 3);
@@ -3913,9 +4113,88 @@ a {
           margin-bottom: 30px;
           margin-top: 5px;
           line-height: calc(34px * 3); }
-        .single__wrapper .single__content blockquote:before {
+        #single__wrapper .single__content blockquote:before {
           content: url("http://localhost/wp-content/uploads/2016/01/lightening_quote.png");
           margin-right: 20px; }
+    #single__wrapper.category-news, #single__wrapper.category-feature {
+      margin-top: -150px; }
+      #single__wrapper.category-news .single__title, #single__wrapper.category-feature .single__title {
+        display: none; }
+      #single__wrapper.category-news .single__menu, #single__wrapper.category-feature .single__menu {
+        width: 260px;
+        height: 300px;
+        margin-top: -103px; }
+        #single__wrapper.category-news .single__menu .next-previous.line-up-next, #single__wrapper.category-feature .single__menu .next-previous.line-up-next {
+          display: none; }
+        #single__wrapper.category-news .single__menu .next-previous.news-next, #single__wrapper.category-feature .single__menu .next-previous.news-next {
+          display: block; }
+        #single__wrapper.category-news .single__menu .next-previous svg path, #single__wrapper.category-feature .single__menu .next-previous svg path {
+          fill: #302784; }
+        #single__wrapper.category-news .single__menu .menu, #single__wrapper.category-feature .single__menu .menu {
+          display: none; }
+      #single__wrapper.category-news .single__image, #single__wrapper.category-feature .single__image {
+        width: 100%;
+        margin-bottom: 20px;
+        position: relative;
+        min-height: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 450px;
+        overflow: hidden;
+        display: block; }
+  .manifesto {
+    position: absolute;
+    bottom: 50px;
+    z-index: 9000000;
+    width: 100%;
+    text-align: center;
+    font-family: 'normalise_din_mnregular';
+    font-weight: normal;
+    font-size: calc(26px * 3);
+    font-style: normal !important;
+    cursor: pointer;
+    text-transform: uppercase; }
+    .manifesto:hover h2 {
+      text-decoration: underline; }
+  .manifesto__wrapper {
+    background-color: rgba(48, 39, 132, 0.95);
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    z-index: 10000000;
+    display: none; }
+    .manifesto__wrapper.display {
+      display: block; }
+    .manifesto__wrapper .manifesto__close {
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      cursor: pointer; }
+      .manifesto__wrapper .manifesto__close svg {
+        width: 40px;
+        height: 40px; }
+    .manifesto__wrapper .manifesto__container {
+      margin-left: auto;
+      margin-right: auto;
+      margin-left: auto;
+      margin-right: auto;
+      width: 96%;
+      color: white;
+      text-align: center;
+      margin-top: 200px; }
+      .manifesto__wrapper .manifesto__container h1 {
+        font-size: calc(34px * 3);
+        margin-bottom: 20px; }
+      .manifesto__wrapper .manifesto__container p {
+        font-size: calc(20px * 3);
+        line-height: calc(20px * 3); }
+      .manifesto__wrapper .manifesto__container h2 {
+        margin-bottom: 20px; }
+      .manifesto__wrapper .manifesto__container a {
+        font-size: 16px;
+        margin-top: 20px; }
+  .mailchimp__wrapper {
+    display: none; }
   .ethos, .line-up .latest {
     padding-top: 100px; }
     .ethos .mobile, .line-up .latest .mobile {
@@ -3929,4 +4208,12 @@ a {
     footer .footer__wrapper {
       margin-left: auto;
       margin-right: auto;
-      width: 96%; } }
+      width: 96%; }
+  .line-up, .latest, .tickets, .about {
+    padding-top: 170px; }
+    .line-up header.mobile, .latest header.mobile, .tickets header.mobile, .about header.mobile {
+      margin-top: -170px; }
+    .line-up #single__background__image, .latest #single__background__image, .tickets #single__background__image, .about #single__background__image {
+      margin-top: 0px; }
+    .line-up .illustration__container, .latest .illustration__container, .tickets .illustration__container, .about .illustration__container {
+      margin-top: -81px; } }
