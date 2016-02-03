@@ -3,15 +3,16 @@
 		<div class="line__up__day">
 			<h1>Friday</h1>
 		</div>
-<?php query_posts('cat=11'); ?>
+<?php query_posts('cat=22'); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="post--wrapper">
+				<a href="<?php the_permalink() ?>"><div class="overlay"></div></a>
 				<div class="line-up__image">
-					<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+					<?php the_post_thumbnail(); ?></a>
 				</div>
-				<h1><?php the_title(); ?></h1>	
+				<a href="<?php the_permalink() ?>"><h1><?php the_title(); ?></h1></a>	
 			</div>			
 		</li>
 <?php endwhile; else: ?>
@@ -26,15 +27,16 @@
 		<div class="line__up__day">
 			<h1>Saturday</h1>
 		</div>
-<?php query_posts('cat=12'); ?>
+<?php query_posts('cat=23'); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="post--wrapper">
+				<a href="<?php the_permalink() ?>"><div class="overlay"></div></a>
 				<div class="line-up__image">
-					<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+					<?php the_post_thumbnail(); ?>
 				</div>
-				<h1><?php the_title(); ?></h1>	
+				<a href="<?php the_permalink() ?>"><h1><?php the_title(); ?></h1></a>	
 			</div>			
 		</li>
 <?php endwhile; else: ?>

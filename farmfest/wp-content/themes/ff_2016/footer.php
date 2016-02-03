@@ -19,10 +19,10 @@
 		<div class="cta">
 			<ul>
 				<li>
-					<button>Get Involved</button>
+					<a href="http://www.farmfestival.co.uk/get-involved/"><button>Get Involved</button></a>
 				</li>
 				<li>
-					<button>Contact Us</button>
+					<a href="http://www.farmfestival.co.uk/contact/"><button>Contact Us</button></a>
 				</li>
 			</ul>
 		</div>

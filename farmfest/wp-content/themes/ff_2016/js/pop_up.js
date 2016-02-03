@@ -4,6 +4,7 @@ $(function () {
 		
 		var cookie = Cookies.get('Farmfest_pop');
 		var cookiePop = Cookies.get('cookies_pop');
+		console.log(cookiePop);
 		var visited = 'visited'
 		var count = Cookies.get('cookie_count') || 0;
 		count ++;
@@ -25,15 +26,12 @@ $(function () {
 		$( ".cookies__wrapper .close" ).click(function() {
 				console.log('clicking cookies');
 			$('.cookies').toggleClass('display');
-			Cookies.set('cookiePop', visited);
+			Cookies.set('cookiePop', 'clicked');
 			console.log('cookies set', cookiePop)
 		});	
 		
 		if(cookiePop != 'clicked'){
 			$('.cookies').removeClass('display');
 		}	
-		
-			
-		
 	}
 });

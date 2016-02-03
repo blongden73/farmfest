@@ -226,7 +226,7 @@ a {
   .hamburger__overlay {
     height: 100vh;
     width: 100%;
-    background-color: rgba(0, 18, 255, 0.8);
+    background-color: rgba(48, 39, 132, 0.95);
     position: fixed;
     z-index: 20000;
     display: none; }
@@ -626,7 +626,8 @@ a {
     .photo__gallery__wrapper img {
       width: 49.3%;
       margin-left: 0.5%;
-      float: left; }
+      float: left;
+      margin-bottom: 10px; }
   footer {
     background-color: #302784;
     height: 610px;
@@ -790,6 +791,51 @@ a {
         .single__wrapper .single__content blockquote:before {
           content: url("http://localhost/wp-content/uploads/2016/01/lightening_quote.png");
           margin-right: 20px; }
+  .manifesto {
+    position: absolute;
+    bottom: 50px;
+    z-index: 100000;
+    width: 100%;
+    text-align: center;
+    font-family: 'normalise_din_mnregular';
+    font-weight: normal;
+    font-size: 26px;
+    font-style: normal !important;
+    cursor: pointer; }
+    .manifesto:hover h2 {
+      text-decoration: underline; }
+  .manifesto__wrapper {
+    background-color: rgba(48, 39, 132, 0.95);
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    z-index: 300000;
+    display: none; }
+    .manifesto__wrapper.display {
+      display: block; }
+    .manifesto__wrapper .manifesto__close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer; }
+      .manifesto__wrapper .manifesto__close svg {
+        width: 20px;
+        height: 20px; }
+    .manifesto__wrapper .manifesto__container {
+      margin-left: auto;
+      margin-right: auto;
+      width: 400px;
+      color: white;
+      text-align: center;
+      margin-top: 200px; }
+      .manifesto__wrapper .manifesto__container h1 {
+        font-size: 34px;
+        margin-bottom: 20px; }
+      .manifesto__wrapper .manifesto__container h2 {
+        margin-bottom: 20px; }
+      .manifesto__wrapper .manifesto__container a {
+        font-size: 26px;
+        margin-top: 20px; }
   .line-up, .latest, .tickets {
     padding-top: 130px; }
     .line-up .desktop, .latest .desktop, .tickets .desktop {
@@ -866,7 +912,7 @@ a {
   .hamburger__overlay {
     height: 100vh;
     width: 100%;
-    background-color: rgba(0, 18, 255, 0.8);
+    background-color: rgba(48, 39, 132, 0.95);
     position: fixed;
     z-index: 20000;
     display: none; }
@@ -1493,6 +1539,11 @@ a {
           padding-bottom: 20px;
           opacity: 1; }
 
+.tickets_small_print {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto; }
+
 @media screen and (min-width: 960px) {
   .cookies {
     background-color: #302784;
@@ -1525,3 +1576,60 @@ a {
       position: absolute;
       right: 0px;
       bottom: -26px; } }
+
+@media screen and (min-width: 960px) {
+  .mailchimp__wrapper {
+    background-color: #f7f7f7;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: 'normalise_din_mnregular';
+    font-weight: normal;
+    font-size: 20px;
+    font-style: normal !important; }
+    .mailchimp__wrapper .mailchimp__container {
+      width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px 0px 0px 0px; }
+      .mailchimp__wrapper .mailchimp__container .indicates-required {
+        font-size: 16px;
+        color: #B0B0B0;
+        margin-bottom: 20px; }
+      .mailchimp__wrapper .mailchimp__container .mc-field-group {
+        margin-bottom: 10px;
+        width: 400px;
+        position: relative;
+        height: 55px; }
+        .mailchimp__wrapper .mailchimp__container .mc-field-group input {
+          height: 50px;
+          background: none;
+          border: 2px solid #302784;
+          font-size: 20px;
+          outline: none;
+          stroke: none;
+          font-family: 'Libre Baskerville', serif;
+          position: absolute;
+          right: 0px; }
+          .mailchimp__wrapper .mailchimp__container .mc-field-group input:focus {
+            border: 3px solid #302784; }
+      .mailchimp__wrapper .mailchimp__container .button {
+        background: none;
+        border: 3px #302784 solid;
+        width: 180px;
+        display: block;
+        height: 85%;
+        color: #302784;
+        text-transform: uppercase;
+        font-family: 'normalise_din_mnregular';
+        font-weight: normal;
+        font-size: calc(26px);
+        font-style: normal !important;
+        margin-top: 20px; }
+        .mailchimp__wrapper .mailchimp__container .button:hover {
+          background-color: #302784;
+          color: white; }
+      .mailchimp__wrapper .mailchimp__container h1 {
+        color: #302784;
+        font-size: 34px;
+        margin-top: 10px; } }

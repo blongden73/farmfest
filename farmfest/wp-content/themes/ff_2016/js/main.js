@@ -1,15 +1,27 @@
 $(function (){
 	//function to seperate the levels of the line up 
 	function lineUp(){
-		var middleTier = $('.line__up__wrapper ul li.category-medium');
+		var middleTier = $('.line__up__wrapper ul.friday li.category-mini');
 		var last = middleTier.length -1;
-		var smallTier = $('.line__up__wrapper ul li.category-small');
+		var smallTier = $('.line__up__wrapper ul.friday li.category-small');
 		var lastSmall = smallTier.length -1;
 		//adds a div after the last medium level to seperate the line up this also removes the last "/"
 		$(middleTier[last]).addClass('last').after('<li class="last-medium"></li>');
 		$(smallTier[lastSmall]).addClass('last').after('<li class="last-medium"></li>');
 	};
 	lineUp();
+	
+	function lineUpSat(){
+		var middleTierSat = $('.line__up__wrapper ul.saturday li.category-mini');
+		var last = middleTierSat.length -1;
+		var smallTierSat = $('.line__up__wrapper ul.saturday li.category-small');
+		var lastSmallSat = smallTierSat.length -1;
+		//adds a div after the last medium level to seperate the line up this also removes the last "/"
+		$(middleTierSat[last]).addClass('last').after('<li class="last-medium"></li>');
+		$(smallTierSat[lastSmallSat]).addClass('last').after('<li class="last-medium"></li>');
+	};
+	lineUpSat();
+	
 	
 	//get the page url
 	var pathname = window.location.pathname;
@@ -34,17 +46,17 @@ $(function (){
 			}
 		}	
 	//adds the colour to the header on the pages needed	
-		if($('.illustration__panel--news').length){
+		if($('.home').length){
 			var illustrationTop = $('.illustration__panel--news').offset().top;
 			var illustrationPos = illustrationTop - scroll;
-			if(illustrationPos <= 100){
-				$('header.desktop').addClass('coloured');
+			if(illustrationPos <= 600){
+				$('header.desktop').addClass('coloured').addClass('animated');
 			}else{
-				$('header.desktop').removeClass('coloured');
+				$('header.desktop').removeClass('coloured').removeClass('animated');
 			}
-		}else if($('.single__title').length){
+		}else if($('.single__content').length){
 			console.log('running');
-			var singleTitle = $('.single__title').offset().top;
+			var singleTitle = $('.single__content').offset().top;
 			var singleTitlePos = singleTitle - scroll;
 			if(singleTitlePos <= 100){
 				$('header.desktop').addClass('coloured');
@@ -111,11 +123,23 @@ $(function (){
 		console.log('clicking');
 		$('.facebook__temp').toggleClass('display');
 	});
-		
+	
+	//click for manifesto
+	$( ".manifesto" ).click(function() {
+		console.log('clicking');
+		$('.manifesto__wrapper').toggleClass('display');
+	});
+	
+	//close manifesto
+	$( ".manifesto__close" ).click(function() {
+		console.log('clicking');
+		$('.manifesto__wrapper').toggleClass('display');
+	});
 	
 	//fix the coloured header for the line up page
 	if(pathnameFinal === 'line-up' || pathnameFinal === 'latest' || pathnameFinal === 'tickets'){
 		$('header.desktop').addClass('coloured');
+		console.log('added');
 	}
 	
 	if( pathnameFinal === 'ethos' || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {

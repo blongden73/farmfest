@@ -5,10 +5,10 @@
 			<h1>latest</h1>
 		</div>
 		<div class="illustration news">
-			<img src="http://localhost/wp-content/uploads/2016/01/bird__news.png">
+			<img src="http://www.farmfestival.co.uk/wp-content/uploads/2016/02/bird__news.png">
 		</div>
 		<div class="section__link">
-			<a href="http://localhost/latest/">See all news</a>
+			<a href="http://www.farmfestival.co.uk/">See all news</a>
 		</div>
 	</div>
 </div>

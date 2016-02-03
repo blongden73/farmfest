@@ -4,7 +4,7 @@
 			<h2>2015</h2>
 			<h1>photos</h1></div>
 		<div class="illustration photos">
-			<img src="http://localhost/wp-content/uploads/2016/01/bird__contact-1.png">
+			<img src="http://www.farmfestival.co.uk/wp-content/uploads/2016/02/bird__contact1.png">
 		</div>
 	</div>
 </div>

@@ -3,7 +3,7 @@
 		<div class="illustration__title">
 			</div>
 		<div class="illustration contact">
-			<img src="http://localhost/wp-content/uploads/2016/01/bird__line.png">
+			<img src="http://www.farmfestival.co.uk/wp-content/uploads/2016/02/bird__line.png">
 		</div>
 	</div>
 </div>

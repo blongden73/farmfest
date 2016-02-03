@@ -4,9 +4,21 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				files: {
-					'style.css' : 'style/style.scss'
+					'test/style.css' : 'style/style.scss'
 				}
 			}
+		},
+		
+		'ftp-deploy': {
+		build: {
+		auth: {
+		host: '91.102.64.132',
+		port: 21,
+		authKey: 'key1'
+    	},
+		src: 'test',
+		dest: '/httpdocs/wp-content/themes/ff_2016'
+  		}
 		},
 		
 		
@@ -20,6 +32,7 @@ module.exports = function(grunt) {
 	});
 	
 	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-ftp-deploy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default',['sass', 'watch']);
+	grunt.registerTask('default',['sass', 'ftp-deploy', 'watch']);
 };

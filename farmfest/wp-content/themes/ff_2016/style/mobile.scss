@@ -134,7 +134,7 @@
 	//Carousel
 	
 	.carousel__wrapper{
-		height: 85vh;
+		height: 76vh;
 		background-color: blue;
 		width: 100%;
 		background: no-repeat center center url('http://localhost/wp-content/uploads/2016/01/AlexMorgan_1.jpg');
@@ -235,14 +235,14 @@
 		}
 	
 	.illustration__panel--news{
-		padding-top: 300px;
+		padding-top: 0px;
 		height: 680px;
 	}
 	
 	.illustration__panel--line{
 		padding-top: 300px;
 		height: 520px;
-		margin-top: -280px;
+		margin-top: -350px;
 	}
 	
 	.illustration__panel--photos{
@@ -306,6 +306,7 @@
 			
 			&.news{
 				right: -150px;
+				top: -130px;
 			}
 			
 			&.line-up{
@@ -377,6 +378,7 @@
 				h4{
 					margin-bottom: 30px;
 					font-size: calc(#{$medium} * #{$multiplier});
+					line-height: calc(#{$medium} * #{$multiplier});
 				}
 				
 				&:after{
@@ -413,6 +415,10 @@
 			@include width-mobile();
 			overflow: auto;
 			
+			&.friday{
+				overflow: hidden;
+			}
+			
 			.post--wrapper{
 				margin-bottom: 10px;
 			}
@@ -443,7 +449,6 @@
 			}
 			
 			li{
-				overflow: hidden;
 				float: none;
 				width: 100%;
 				
@@ -468,7 +473,7 @@
 					
 					.line-up__image{
 					@include line-up-image(505px , 130px);	
-					
+					height: 505px !important;
 
 						img{
 							width: 100%;
@@ -519,47 +524,30 @@
 					}
 				}
 				
+								
+				&.category-small, &.category-medium, &.category-mini{
+					word-wrap:break-word;
+				}
+				
 				&.category-medium{
-					width: max-content;
-					float: left;
-					color: $primary-colour;
+					height: 266px;
 					
 					.post--wrapper{
-						margin-right: 20px;
-						min-height: 0px;
-					}
-					
-					&.last{
-						h1{
-							&::after{
-							content: "";
-						}
-						}
-					}
-					
-					h1{
-						font-size: calc(#{$regular} * #{$multiplier});
-						color: $primary-colour;
-						padding-top: 0px;
-						padding-left: 0px;
-						position: relative;
-								
-						&::after{
-							content: " / ";
+						min-height: 272px;
+						
+						a{
+							h1{
+								font-size: calc(#{$regular} * #{$multiplier});
+							}
 						}
 					}
 					
 					.line-up__image{
-						display: none;
-						
-						img{
-							width: 100%;
-							height: auto;
-						}
-						
-					}			
+						min-height: 259px;
+					}
 				}
 				
+								
 				&.last-medium{
 					    float: left;
 						width: 100%;
