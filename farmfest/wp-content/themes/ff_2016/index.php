@@ -1,7 +1,6 @@
 <?php get_header() ?>
 <?php get_template_part('manifesto');?>
 <?php get_template_part('carousel'); ?> 
-<?php get_template_part('buy_tickets_button'); ?>
 <?php get_template_part('illustration__panel__news');?>
 <?php get_template_part('news');?>
 <?php get_template_part('illustration__panel__line');?>

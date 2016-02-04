@@ -1,5 +1,7 @@
-@media screen and ($break-min: $break-tablet) {
-
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
 //mobile
 	
 	.mobile{
@@ -444,7 +446,6 @@
 	
 	.illustration__panel--news, .illustration__panel--line, .illustration__panel--photos, .illustration__panel--contact{
 		position: relative;
-		overflow: hidden;
 		
 		h1, h2{
 			padding: 0;
@@ -1016,7 +1017,6 @@
 					li{
 						float: left;
 						width: 100px;
-						margin-right: 20px;
 						
 						img{
 							width: 100%;
@@ -1029,12 +1029,6 @@
 			
 			
 			.cta{
-				
-				a{
-					text-decoration: none !important;
-					font-style: normal;
-				}
-				
 				border-bottom: 1px solid white;
 				overflow: auto;
 				padding: 50px 0 50px 0px;
@@ -1054,6 +1048,10 @@
 					@include list();
 					
 					li{
+						a{
+							text-decoration: none;
+						}
+						
 						float: left;
 						width: 200px
 					}
@@ -1464,11 +1462,10 @@
 		height: 400px;
 		width: 100%;
 		margin-bottom: 20px;
-		@include type($regular);
-		display: none;	
+		@include type($regular);	
 		
 		.mailchimp__container{
-			@include width-768();
+			@include width-desktop();
 			padding: 10px 0px 0px 0px;
 			
 			.indicates-required{

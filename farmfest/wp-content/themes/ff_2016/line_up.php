@@ -12,7 +12,7 @@
 				<div class="line-up__image">
 					<?php the_post_thumbnail(); ?></a>
 				</div>
-				<a href="<?php the_permalink() ?>"><h1><?php the_title(); ?></h1></a>	
+				<h1><?php the_title(); ?></h1>
 			</div>			
 		</li>
 <?php endwhile; else: ?>
@@ -36,7 +36,7 @@
 				<div class="line-up__image">
 					<?php the_post_thumbnail(); ?>
 				</div>
-				<a href="<?php the_permalink() ?>"><h1><?php the_title(); ?></h1></a>	
+				<h1><?php the_title(); ?></h1>
 			</div>			
 		</li>
 <?php endwhile; else: ?>

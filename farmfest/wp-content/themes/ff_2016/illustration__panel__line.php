@@ -5,8 +5,5 @@
 		<div class="illustration line-up">
 			<img src="http://www.farmfestival.co.uk/wp-content/uploads/2016/02/bird__photos.png">
 		</div>
-		<div class="section__link">
-			<a href="http://www.farmfestival.co.uk/">See all line up</a>
-		</div>
 	</div>	
 </div>

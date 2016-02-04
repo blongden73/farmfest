@@ -12,11 +12,18 @@
 	
 	//Header
 	
+	.home{
+		header{
+			margin-top: -5px;
+		}
+	}
+	
 	header{
 		height: 260px;
-		background-color: $primary-colour;
+		background-color: white;
 		width: 100%;
 		z-index: 20000;
+		margin-top: -270px;
 		
 		&.desktop{
 			display: none;
@@ -28,17 +35,21 @@
 		}
 	
 		.hamburger{
-			width: 25%;
+			width: 15%;
 			height: 160px;
 			float: left;
 		}
 		
 		.page__title{
-			width: 73%;
+			width: 30%;
 			height: 270px;
 			float: left;
-			text-align: right;
+			text-align: left;
 			padding-right: 2%;
+			
+			img{
+				width: 280px;
+			}
 			
 			a{
 				text-decoration: none;
@@ -53,26 +64,52 @@
 		}
 		
 		.sub__nav{
-			background-color: $grey;
+			background-color: $primary-colour;
 			height: 104px;
 			overflow: hidden;
 			float: left;
 			width: 100%;
 			display: none;
 			text-transform: uppercase;
+			color: white;
+			
+			p{
+				font-size: calc(#{$regular} * #{$multiplier});
+				text-transform: capitalize;
+			    margin-top: 24px;
+			    width: 50%;
+			    margin-left: 15px;
+			    margin-bottom: 60px;
+			    float: left;
+			}
+			
+			
+			.sub_menu_involve{
+				display: none;
+			}
+			
+			.sub_menu_contact{
+				display: none;
+			}
 			
 			&.display{
 				display: block;
 			}
 			
 			&.open{
-				height: max-content;
+				height: intrinsic;
 			}
 			
 			.open__close{
 				width: 100px;
 				height: 100px;
 				float: right;
+				margin-top: -135px;
+				margin-right: 20px;
+				-webkit-transition: all $animation-speed ease-in;
+				-moz-transition: all $animation-speed ease-in;
+				-o-transition: all $animation-speed ease-in;
+				transition: all $animation-speed ease-in;
 				
 				&.open{
 						-ms-transform: rotate(180deg); /* IE 9 */
@@ -95,7 +132,8 @@
 				
 				
 				li{
-					font-size: calc(#{$large} * #{$multiplier});
+					font-size: calc(#{$medium} * #{$multiplier});
+					margin-bottom: 30px;
 					
 					a{
 						text-decoration: none;
@@ -117,14 +155,55 @@
 	
 	}
 	
-	.about{
-			header{
-			.sub__nav{
-				display: block;
-				margin-top: -11px;
-			}	
+	.get-involved, .volunteer, .paid-roles-interships, .become-an-ambassabor, .contact {
+			header{	
+				.sub__nav{
+					display: block;
+					margin-top: -20px;
+					
+					.sub_menu{
+						display: none;
+					}
+					
+					.sub_menu_involve{
+					display: block;
+					margin-top: -7px;
+					}
+				}	
 			}
 		}
+		
+	.contact, .general-enquiries, .press-enquiries, .entertainment-application, .food-drink-application, .stalls-application, .band-dj-application{
+			header{	
+				.sub__nav{
+					display: block;
+					margin-top: -11px;
+					
+					.sub_menu{
+						display: none;
+					}
+					
+					.sub_menu_contact{
+					display: block;
+					margin-top: -7px;
+					}
+					
+					.sub_menu_involve{
+					display: none;
+					margin-top: -19px;
+					}
+				}	
+			}
+		}	
+		
+	.ethos, .info, .travel, .camping, .kids, .ticketing-issues, .disabled, .food-drink, .safety, .packing-list, .faq{
+			header{	
+				.sub__nav{
+					display: block;
+					margin-top: -19px;
+				}	
+			}
+		}	
 	
 	.hamburger__menu{
 		position: fixed;
@@ -139,8 +218,17 @@
 			width: 60px;
 			height: 60px;
 			
+			&.hamburger_button{			
+				rect{
+					fill: $primary-colour;
+				}
+			}
+			
 			&.hamburger__close{
 				display: none;
+					rect{
+						fill:white;
+					}
 			}
 		}
 		
@@ -165,6 +253,11 @@
 		position: fixed;
 		z-index: 20000;
 		display: none;
+		top: 0;
+		-webkit-transition: all $animation-speed ease-in;
+		-moz-transition: all $animation-speed ease-in;
+		-o-transition: all $animation-speed ease-in;
+		transition: all $animation-speed ease-in;
 		
 		&.display{
 			display: block;
@@ -174,7 +267,7 @@
 			@include width-mobile();
 			@include type(calc(#{$large} * #{$multiplier}));
 			color: white;
-			margin-top: 30vh;
+			margin-top: 25vh;
 			
 			li{
 			text-align: center;
@@ -230,8 +323,9 @@
 				@include transition(1s);
 				
 				img{
-					width: 227%;
-					margin-left: -60%;
+					width: 187%;
+					margin-left: -43%;
+					margin-top: 26vw;				
 				}
 				
 				h1{
@@ -261,10 +355,11 @@
 	
 	.buy__button{
 		height: 15vh;
-		width: 100%;
-		background-color: $primary-colour;
+		width: 50%;
+		background-color: transparent;
 		padding-top: 1vh;
 		display: block;
+		float: left;
 		
 		a{
 			text-decoration: none;
@@ -272,14 +367,18 @@
 		
 		button{
 			background: none;
-		    border: 12px white solid;
+		    border: 12px $primary-colour solid;
 		    width: 90%;
 		    margin-left: auto;
 		    margin-right: auto;
 		    display: block;
 		    height: 85%;
-		    font-size: calc(#{$large} * #{$multiplier});
-		    color: white;
+		    
+		    
+		    h1{
+			    color: $primary-colour;
+			    font-size: calc(#{$base} * #{$multiplier});
+		    }
 		    
 		    &:hover{
 			    background-color: white;
@@ -410,6 +509,9 @@
 		min-height: 330px;
 		width: 100%;
 		
+		svg{
+			display: none;
+		}
 		
 		.news__image{
 			width: 100%;
@@ -517,11 +619,10 @@
 				width: 100%;
 				
 				&.category-large{
-					margin-bottom: 10px;
 					
 					.post--wrapper{
 						position: relative;
-						min-height: 505px;
+						min-height: 500px;
 						float: none;
 						width: 100%;
 						
@@ -599,10 +700,9 @@
 					.post--wrapper{
 						min-height: 272px;
 						
-						a{
-							h1{
-								font-size: calc(#{$regular} * #{$multiplier});
-							}
+						h1{	
+							width: 80%;
+							font-size: calc(#{$regular} * #{$multiplier});
 						}
 					}
 					
@@ -617,10 +717,8 @@
 					.post--wrapper{
 						min-height: 272px;
 						
-						a{
-							h1{
-								font-size: calc(#{$small} * #{$multiplier});
-							}
+						h1{
+							font-size: calc(#{$base} * #{$multiplier});
 						}
 					}
 					
@@ -682,7 +780,7 @@
 		}	
 			
 		img{
-			width: 49.3%;
+			width: 99.3%;
 			margin-left: 0.5%;
 			float: left;
 		}
@@ -700,7 +798,7 @@
 	    -o-background-size: cover;
 	    background-size: cover;
 	    position: relative;
-	    margin-top: -0px;
+	    margin-top: 270px;
 	    
 	    .single__title__wrapper{
 	    	position: absolute;
@@ -711,6 +809,9 @@
 			
 		    .single__title{
 			    @include width-mobile();
+			    h1{
+				   font-size: calc(#{$large} * #{$multiplier}); 
+			    }
 		    }
 	    
 	    }
@@ -770,6 +871,20 @@
 			float: left;
 			margin-bottom: 20px;
 			
+			h1{
+			font-size: calc(#{$large} * #{$multiplier});	
+			line-height: calc(#{$large} * #{$multiplier});
+			}
+			
+			.single__title{
+				h1{
+				   font-size: calc(#{$large} * #{$multiplier});
+				   margin-top: 40px;
+				   margin-bottom: 60px; 
+			    }
+			}
+
+			
 			ul{
 				margin-top: 20px;
 				margin-bottom: 20px;
@@ -798,6 +913,10 @@
 				margin-bottom: 20px;
 			}
 			
+			iframe{
+				width: 100%;
+			}
+			
 			blockquote{
 				margin-top: 20px;
 				margin-left: 0px;
@@ -808,12 +927,29 @@
 					margin-bottom: 30px;
 					margin-top: 5px;
 					line-height: calc(#{$large} * #{$multiplier});
+					position: relative
 				}
 				
 				&:before{
 					content: url('http://localhost/wp-content/uploads/2016/01/lightening_quote.png');
 					margin-right: 20px;
 				}
+			}
+		}
+		
+		&.category-line-up{
+			margin-top: -210px;
+			
+			.single__image{
+			width: 100%;
+			margin-bottom: 20px;
+			position: relative;
+			min-height: 40px;
+			margin-left: auto;
+			margin-right: auto;
+			height: 450px;
+			overflow: hidden;
+			display: block;
 			}
 		}
 		
@@ -871,7 +1007,7 @@
 	.manifesto{
 		position: absolute;
 		bottom: 50px;
-		z-index: 9000000;
+		z-index: 10;
 		width: 100%;
 		text-align: center;
 		@include type(calc(#{$medium} * #{$multiplier}));
@@ -894,6 +1030,10 @@
 		width: 100%;
 		z-index: 10000000;
 		display: none;
+		-webkit-transition: all $animation-speed ease-in;
+		-moz-transition: all $animation-speed ease-in;
+		-o-transition: all $animation-speed ease-in;
+		transition: all $animation-speed ease-in;
 		
 		&.display{
 			display: block;
@@ -930,6 +1070,7 @@
 			p{	
 				font-size: calc(#{$regular} * #{$multiplier}) ;
 				line-height: calc(#{$regular} * #{$multiplier});
+				margin-bottom: 40px;
 			}
 			
 			h2{
@@ -937,7 +1078,7 @@
 			}
 			
 			a{
-				font-size: $small;
+				font-size: calc(#{$regular} * #{$multiplier});
 				margin-top: 20px;
 			}
 		}
@@ -961,8 +1102,57 @@
 	
 	footer{
 		background-color: $primary-colour;
-		height: 100vh;
+		height: 56vh;
 		margin-top: 0px;
+		.footer__wrapper{
+			.social__media{
+				ul{
+					li{
+					    width: 21vw;
+						height: 21vw;
+						margin-right: 20px !important;
+						border: 4px solid white;
+						
+						svg{
+							width: 10vw;
+							height: 17vw;
+						}
+						
+						a{
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		
+		.cta{
+			padding: 90px 0 50px 0px;
+			ul{
+				li{
+					width: 46vw;
+					height: 24vw;
+					
+					a{
+						text-decoration: none;
+					}
+					
+				}
+				button{
+					font-size: calc(#{$regular} * #{$multiplier});
+					
+				}
+			}	
+		}
+		
+		.logos{
+			ul{
+				li{
+					width: 230px;
+				}
+			}
+		}
+				
+		}
 		
 		.footer__wrapper{
 			@include width-mobile();
@@ -973,8 +1163,27 @@
 	.line-up, .latest, .tickets, .about{
 		padding-top: 170px;
 		
+		.illustration__panel--news{
+			.illustration__container{
+				.illustration__title{
+					margin-top: 220px;
+				}
+			}
+		}
+		
+		.illustration__panel--line{
+			.illustration__container{
+				.line-up{
+					top: -20px;
+				}
+				.illustration__title{
+					margin-top: 220px;
+				}
+			}
+		}
+		
 		header.mobile{
-			margin-top: -170px;
+			margin-top: -175px;
 		}
 		
 		#single__background__image{

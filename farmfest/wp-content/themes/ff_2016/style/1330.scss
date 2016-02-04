@@ -880,7 +880,6 @@
 						min-height: 182px;
 						
 						.overlay{
-							display: none;
 						}
 					}
 					
@@ -1053,7 +1052,7 @@
 					
 					li{
 						float: left;
-						width: 200px
+						width: 200px;
 					}
 				}
 			}
@@ -1074,9 +1073,6 @@
 						border: 2px solid white; 
 						margin-right: 5px;
 						
-						&:last-child{
-							margin-right: 0;
-						}
 						
 						svg{
 							fill:white;

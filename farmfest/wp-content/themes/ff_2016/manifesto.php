@@ -12,6 +12,6 @@ set to a beautiful Somerset vista.
 
 Or to put it simply: good music, good causes, good times.</p>
 
-	<a href="http://www.farmfestival.co.uk/about/">Read our full ethos</a>
+	<a href="http://www.farmfestival.co.uk/ethos/">Read our full ethos</a>
 	</div>
 </div>

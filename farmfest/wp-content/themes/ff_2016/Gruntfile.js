@@ -34,5 +34,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-ftp-deploy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default',['sass', 'ftp-deploy', 'watch']);
+	grunt.registerTask('default',['sass','ftp-deploy', 'watch']);
 };

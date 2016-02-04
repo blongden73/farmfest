@@ -16,9 +16,23 @@
 <header class="mobile">
 	<div class="hamburger"></div>
 	<div class="page__title">
-		<a href="<?php bloginfo('url') ?>"><h1>FARMFEST</h1></a><h2></h2></div>
+		<a href="<?php bloginfo('url') ?>"><img src="http://www.farmfestival.co.uk/wp-content/uploads/2016/02/ff_logo.png"></a></div>
+	<div class="buy__button">
+		<a href="http://www.farmfestival.co.uk/tickets"><button><h1>BUY TICKETS</h1></button></a>
+	</div>
 	<div class="sub__nav">
-		<?php wp_nav_menu( array( 'theme_location' => 'sub-menu' ) ); ?>
+		<div class="sub_menu">
+			<p>--Menu--</p>
+			<?php wp_nav_menu( array( 'theme_location' => 'sub-menu' ) ); ?>
+		</div>
+		<div class="sub_menu_contact">
+			<p>--Menu--</p>
+			<?php wp_nav_menu( array( 'theme_location' => 'sub-contact' ) ); ?>
+		</div>
+		<div class="sub_menu_involve">
+			<p>--Menu--</p>
+			<?php wp_nav_menu( array( 'theme_location' => 'sub-involve' ) ); ?>
+		</div>
 		<div class="open__close">
 			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="20px" height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">

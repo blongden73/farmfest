@@ -295,12 +295,7 @@
 		}
 		
 		.gradient{
-			position: absolute;
-		    height: 640px;
-		    width: 100%;
-		    bottom: 0;
-			@include gradient();
-			z-index: 5;
+			
 			display: none;
 		}
 		
@@ -878,7 +873,7 @@
 						min-height: 182px;
 						
 						.overlay{
-							display: none;
+							
 						}
 					}
 					
@@ -1019,6 +1014,7 @@
 					li{
 						float: left;
 						width: 100px;
+						margin-right: 20px;
 						
 						img{
 							width: 100%;
@@ -1031,6 +1027,12 @@
 			
 			
 			.cta{
+				
+				a{
+					text-decoration: none !important;
+					font-style: normal;
+				}
+				
 				border-bottom: 1px solid white;
 				overflow: auto;
 				padding: 50px 0 50px 0px;
@@ -1049,12 +1051,13 @@
 				ul{
 					@include list();
 					
+					
 					li{
 						float: left;
 						width: 200px;
 						
 						a{
-						text-decoration: none;
+						text-decoration: none !important;
 						font-style: normal;
 						}
 					}
@@ -1077,9 +1080,6 @@
 						border: 2px solid white; 
 						margin-right: 5px;
 						
-						&:last-child{
-							margin-right: 0;
-						}
 						
 						svg{
 							fill:white;
@@ -1395,6 +1395,10 @@
 		@include type($medium);
 		cursor: pointer;
 		text-transform: uppercase;
+		-webkit-transition: all $animation-speed ease-in;
+		-moz-transition: all $animation-speed ease-in;
+		-o-transition: all $animation-speed ease-in;
+		transition: all $animation-speed ease-in;
 		
 		&:hover{
 			h2{
