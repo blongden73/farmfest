@@ -51,8 +51,10 @@ $(function (){
 			var illustrationPos = illustrationTop - scroll;
 			if(illustrationPos <= 600){
 				$('header.desktop').addClass('coloured').addClass('animated');
+				$('.carousel__wrapper .arrow').addClass('hide');
 			}else{
 				$('header.desktop').removeClass('coloured').removeClass('animated');
+				$('.carousel__wrapper .arrow').removeClass('hide');
 			}
 		}else if($('.single__content').length){
 			console.log('running');
@@ -75,6 +77,12 @@ $(function (){
 				var ticketPriceReformat = ticketPrices.eq(i).html().replace(',', ' —');
 				ticketPrices.eq(i).html(ticketPriceReformat);
 				console.log(ticketPrices.eq(i).html().replace(',', '%'));
+				var ticketPriceReformatSplit = ticketPriceReformat.split('—');
+				console.log(ticketPriceReformatSplit[0]);
+				var type = $('.price__type')[i];
+				var price = $('.price')[i];
+				$(type).html(ticketPriceReformatSplit[0]);
+				$(price).html(ticketPriceReformatSplit[1]);
 			}
 			ticketFormat();
 		}

@@ -55,6 +55,7 @@
 					
 					p{	
 						font-size: calc(#{$base} * #{$multiplier});
+						line-height: calc(#{$base + 2} * #{$multiplier});
 						margin-left: 10px;
 						margin-bottom: 90px;
 					}
@@ -143,6 +144,15 @@
 					
 					.prices__wrapper{
 						
+						.ticket__prices{
+							
+							.price__type, .price{
+							
+	  								font-size: calc(#{$base} * #{$multiplier});
+							
+							}
+						}
+						
 						h2{
 							font-size: calc(#{$medium} * #{$multiplier});
 							width: 98%;
@@ -150,7 +160,7 @@
 						}
 						
 						p{	
-							font-size: calc(#{$base} * #{$multiplier});
+							font-size: calc(#{$medium} * #{$multiplier});
 							margin-left: 2%;
 						}
 

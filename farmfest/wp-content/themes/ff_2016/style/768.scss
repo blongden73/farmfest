@@ -665,7 +665,6 @@
 				float: left;
 				width: 48.8%;
 				margin-right: 1%;
-				border-right: 1px solid $primary-colour;
 				padding-right: 1%;
 			}
 			
@@ -1076,9 +1075,6 @@
 						border: 2px solid white; 
 						margin-right: 5px;
 						
-						&:last-child{
-							margin-right: 0;
-						}
 						
 						svg{
 							fill:white;

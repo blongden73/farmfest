@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <title>Farmfestival | Somerset</title>
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>"/>
+<meta property="og:image" content="http://www.farmfestival.co.uk/wp-content/uploads/2016/02/FF16_GALLERY_FEATHER_2.jpg" />
+<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/test/style.css"/>
 <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/js/swipebox/src/css/swipebox.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/carousel.js"></script>

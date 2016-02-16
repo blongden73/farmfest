@@ -67,30 +67,42 @@
 						<h2 class="ticket_header">
 							<?php echo $fri_sat; ?>
 						</h2>
-					    <p>
-						    <?php echo $price_one; ?>
-					    </p>
-					    <p>
-						    <?php echo $price_two; ?>
-						</p>
-					    <p>
-						    <?php echo $price_three; ?>
-					    </p>
+						<div class="ticket__prices">
+						    <p>
+							    <?php echo $price_one; ?>
+						    </p>
+						    <div class="price__type"></div><div class="price__split"></div><div class="price"></div>
+						    <p>
+							    <?php echo $price_two; ?>
+							</p>
+							<div class="price__type"></div><div class="price__split"></div><div class="price"></div>
+						    <p>
+							    <?php echo $price_three; ?>
+						    </p>
+						    <div class="price__type"></div><div class="price__split"></div><div class="price"></div>
+						</div>
 					    <h2 class="ticket_header">
 						    <?php echo $price_four; ?>
 						</h2>
-					    <p>
-						   	<?php echo $price_five; ?>
-						</p>
-					    <p>
-						    <?php echo $price_six; ?>
-						</p>
+						<div class="ticket__prices">
+						    <p>
+							   	<?php echo $price_five; ?>
+							</p>
+							<div class="price__type"></div><div class="price__split"></div><div class="price"></div>
+						    <p>
+							    <?php echo $price_six; ?>
+							</p>
+							<div class="price__type"></div><div class="price__split"></div><div class="price"></div>
+						</div>	
 					    <h2 class="ticket_header">
 						   	<?php echo $price_seven; ?>
 						</h2>
-					    <p>
-						   	<?php echo $price_eight; ?>
-						</p>
+						<div class="ticket__prices">
+						    <p>
+							   	<?php echo $price_eight; ?>
+							</p>
+							<div class="price__type"></div><div class="price__split"></div><div class="price"></div>
+						</div>
 					</div>
 				</li>
 		

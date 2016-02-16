@@ -163,7 +163,8 @@ a {
           margin-bottom: 10px;
           margin-top: 10px; }
         .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider p {
-          margin-left: 10px; }
+          margin-left: 10px;
+          line-height: calc(20px); }
         .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider h2 {
           font-size: calc(26px);
           position: absolute;
@@ -225,7 +226,28 @@ a {
           width: 98%;
           padding-left: 2.5%; }
         .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .prices__wrapper p {
-          margin-left: 2%; }
+          margin-left: 2%;
+          display: none; }
+        .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .prices__wrapper .ticket__prices {
+          overflow: auto; }
+        .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .prices__wrapper .price__split {
+          width: 50%;
+          float: left;
+          border-bottom: black 1px dotted;
+          margin-top: 9px; }
+        .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .prices__wrapper .price__type {
+          width: 25%;
+          padding-left: 2.5%;
+          float: left;
+          font-family: 'Libre Baskerville', serif;
+          margin-bottom: 5px; }
+        .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .prices__wrapper .price {
+          width: 20%;
+          padding-right: 2.5%;
+          float: left;
+          text-align: right;
+          font-family: 'Libre Baskerville', serif;
+          margin-bottom: 5px; }
         .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .stage_name {
           color: #302784;
           font-family: 'normalise_din_mnregular';
@@ -239,9 +261,9 @@ a {
         .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .ticket_header {
           color: #302784;
           width: 100%;
-          border-top: 2px #302784 dashed;
+          border-top: 2px #302784 solid;
           padding: 10px 0px 10px 0px;
-          border-bottom: 2px #302784 dashed;
+          border-bottom: 2px #302784 solid;
           margin-top: 10px;
           margin-bottom: 10px; }
         .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price.col1 {
@@ -766,7 +788,6 @@ a {
         float: left;
         width: 48.8%;
         margin-right: 1%;
-        border-right: 1px solid #302784;
         padding-right: 1%; }
       .line__up__wrapper ul.saturday {
         float: left;
@@ -1050,8 +1071,6 @@ a {
             height: 100px;
             border: 2px solid white;
             margin-right: 5px; }
-            footer .footer__wrapper .social__media ul li:last-child {
-              margin-right: 0; }
             footer .footer__wrapper .social__media ul li svg {
               fill: white;
               display: block;
@@ -1815,7 +1834,6 @@ a {
         float: left;
         width: 48.8%;
         margin-right: 1%;
-        border-right: 1px solid #302784;
         padding-right: 1%; }
       .line__up__wrapper ul.saturday {
         float: left;
@@ -2335,62 +2353,8 @@ a {
     font-family: 'normalise_din_mnregular';
     font-weight: normal;
     font-size: 20px;
-    font-style: normal !important; }
-    .mailchimp__wrapper .mailchimp__container {
-      width: 960px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 10px 0px 0px 0px; }
-      .mailchimp__wrapper .mailchimp__container .indicates-required {
-        font-size: 16px;
-        color: #B0B0B0;
-        margin-bottom: 20px; }
-      .mailchimp__wrapper .mailchimp__container .mc-field-group {
-        margin-bottom: 10px;
-        width: 400px;
-        position: relative;
-        height: 55px; }
-        .mailchimp__wrapper .mailchimp__container .mc-field-group input {
-          height: 50px;
-          background: none;
-          border: 2px solid #302784;
-          font-size: 20px;
-          outline: none;
-          stroke: none;
-          font-family: 'Libre Baskerville', serif;
-          position: absolute;
-          right: 0px; }
-          .mailchimp__wrapper .mailchimp__container .mc-field-group input:focus {
-            border: 3px solid #302784; }
-      .mailchimp__wrapper .mailchimp__container .button {
-        background: none;
-        border: 3px #302784 solid;
-        width: 180px;
-        display: block;
-        height: 85%;
-        color: #302784;
-        text-transform: uppercase;
-        font-family: 'normalise_din_mnregular';
-        font-weight: normal;
-        font-size: calc(26px);
-        font-style: normal !important;
-        margin-top: 20px; }
-        .mailchimp__wrapper .mailchimp__container .button:hover {
-          background-color: #302784;
-          color: white; }
-      .mailchimp__wrapper .mailchimp__container h1 {
-        color: #302784;
-        font-size: 34px;
-        margin-top: 10px; }
-  .mailchimp__wrapper {
-    background-color: #f7f7f7;
-    height: 400px;
-    width: 100%;
-    margin-bottom: 20px;
-    font-family: 'normalise_din_mnregular';
-    font-weight: normal;
-    font-size: 20px;
-    font-style: normal !important; }
+    font-style: normal !important;
+    display: block; }
     .mailchimp__wrapper .mailchimp__container {
       width: 960px;
       margin-left: auto;
@@ -2451,7 +2415,7 @@ a {
     height: 200px;
     background-color: #302784;
     width: 100%;
-    z-index: 7000000; }
+    z-index: 32; }
     header.desktop {
       display: block;
       height: 120px;
@@ -2472,6 +2436,10 @@ a {
       header.desktop.coloured {
         background-color: white;
         color: #302784; }
+        header.desktop.coloured .desktop__nav .desktop__buy:hover .buy__button__desktop {
+          background-color: #302784; }
+        header.desktop.coloured .desktop__nav .desktop__buy:hover h1 {
+          color: white; }
         header.desktop.coloured .logo {
           opacity: 1;
           -webkit-transition: all 0.3s ease-in;
@@ -2493,6 +2461,7 @@ a {
         header.desktop.coloured .desktop__options h1 {
           color: #302784; }
         header.desktop.coloured .desktop__buy .buy__button__desktop {
+          cursor: pointer;
           border: 3px solid #302784; }
           header.desktop.coloured .desktop__buy .buy__button__desktop h1 {
             color: #302784; }
@@ -2633,6 +2602,31 @@ a {
     color: white;
     position: relative;
     overflow: hidden; }
+  @keyframes slidein {
+    from {
+      top: 500px; }
+    to {
+      top: 520px; } }
+    .carousel__wrapper .arrow {
+      margin: auto;
+      position: absolute;
+      top: 500px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 100px;
+      width: 50px;
+      z-index: 10;
+      animation-duration: 1s;
+      animation-delay: 2.5s;
+      animation-name: slidein;
+      animation-iteration-count: infinite; }
+      .carousel__wrapper .arrow.hide {
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
     .carousel__wrapper.category-hide h1 {
       display: none; }
     .carousel__wrapper.category-hide a {
@@ -2726,8 +2720,8 @@ a {
     z-index: -2000; }
   .illustration__panel--photos {
     padding-top: 0px;
-    height: 168px;
-    margin-top: 0px;
+    height: 200px;
+    margin-top: -30px;
     background: url("http://www.farmfestival.co.uk/wp-content/uploads/2016/02/clouds_two_background1.png");
     z-index: -2000; }
     .illustration__panel--photos img {
@@ -2870,6 +2864,63 @@ a {
       bottom: -30px;
       width: 90%;
       margin-left: 10px; }
+  .entertainment__wrapper {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto; }
+    .entertainment__wrapper ul .entertainment__day {
+      border-top: 3px #302784 solid;
+      border-bottom: 3px #302784 solid;
+      padding: 20px 0px 20px 0px;
+      margin-bottom: 10px;
+      text-transform: uppercase; }
+      .entertainment__wrapper ul .entertainment__day h1 {
+        font-size: calc(34px);
+        color: #302784;
+        text-decoration: none !important;
+        font-style: normal !important; }
+    .entertainment__wrapper ul li {
+      overflow: hidden;
+      float: left; }
+      .entertainment__wrapper ul li.category-large {
+        width: 50%; }
+        .entertainment__wrapper ul li.category-large:hover img {
+          opacity: 0.2; }
+        .entertainment__wrapper ul li.category-large .post--wrapper {
+          position: relative;
+          float: left;
+          width: 99.5%;
+          min-height: 312px; }
+          .entertainment__wrapper ul li.category-large .post--wrapper .overlay {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.2);
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            z-index: 10; }
+          .entertainment__wrapper ul li.category-large .post--wrapper h1 {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: calc(34px);
+            text-transform: uppercase;
+            z-index: 30; }
+          .entertainment__wrapper ul li.category-large .post--wrapper a {
+            text-decoration: none;
+            font-style: normal; }
+        .entertainment__wrapper ul li.category-large .line-up__image {
+          overflow: hidden;
+          max-height: 310px;
+          min-height: 130px;
+          position: absolute;
+          width: 100%;
+          height: 310px !important;
+          background-color: #302784; }
+          .entertainment__wrapper ul li.category-large .line-up__image img {
+            width: 100%;
+            height: auto;
+            display: block; }
   .line__up__wrapper {
     min-height: 330px;
     width: 100%;
@@ -2894,7 +2945,6 @@ a {
         float: left;
         width: 49.8%;
         margin-right: 1%;
-        border-right: 1px solid #302784;
         padding-right: 1%; }
       .line__up__wrapper ul.saturday {
         float: left;
@@ -2985,7 +3035,9 @@ a {
           margin-right: 0.1%;
           float: left;
           color: #302784;
-          height: auto; }
+          height: auto;
+          margin-bottom: 0px;
+          margin-top: 0px; }
           .line__up__wrapper ul li.category-medium:hover img {
             opacity: 0.2; }
           .line__up__wrapper ul li.category-medium .post--wrapper {
@@ -3030,7 +3082,8 @@ a {
           margin-right: 0.1%;
           float: left;
           color: #302784;
-          height: 127px; }
+          height: 127px;
+          margin-bottom: 2px; }
           .line__up__wrapper ul li.category-mini:hover img {
             opacity: 0.2; }
           .line__up__wrapper ul li.category-mini .post--wrapper {
@@ -3088,22 +3141,103 @@ a {
             font-size: calc(18px); }
             .line__up__wrapper ul li.category-small h1::after {
               content: " / "; }
+  .mailchimp__wrapper {
+    background-color: #f7f7f7;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: 'normalise_din_mnregular';
+    font-weight: normal;
+    font-size: 20px;
+    font-style: normal !important;
+    display: block; }
+    .mailchimp__wrapper .mailchimp__container {
+      width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      width: intrinsic !important;
+      padding: 10px 0px 0px 0px; }
+      .mailchimp__wrapper .mailchimp__container .indicates-required {
+        font-size: 16px;
+        color: #B0B0B0;
+        margin-bottom: 20px; }
+      .mailchimp__wrapper .mailchimp__container .mc-field-group {
+        margin-bottom: 10px;
+        width: 400px;
+        position: relative;
+        height: 55px; }
+        .mailchimp__wrapper .mailchimp__container .mc-field-group input {
+          height: 50px;
+          background: none;
+          border: 2px solid #302784;
+          font-size: 20px;
+          outline: none;
+          stroke: none;
+          font-family: 'Libre Baskerville', serif;
+          position: absolute;
+          right: 0px; }
+          .mailchimp__wrapper .mailchimp__container .mc-field-group input:focus {
+            border: 3px solid #302784; }
+      .mailchimp__wrapper .mailchimp__container .button {
+        background: none;
+        border: 3px #302784 solid;
+        width: 180px;
+        display: block;
+        height: 85%;
+        color: #302784;
+        text-transform: uppercase;
+        font-family: 'normalise_din_mnregular';
+        font-weight: normal;
+        font-size: calc(26px);
+        font-style: normal !important;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto; }
+        .mailchimp__wrapper .mailchimp__container .button:hover {
+          background-color: #302784;
+          color: white; }
+      .mailchimp__wrapper .mailchimp__container h1 {
+        color: #302784;
+        font-size: 34px;
+        margin-top: 10px; }
   .photo__gallery__wrapper {
-    min-height: 1216px;
+    min-height: 1276px;
     width: 100%;
     width: 1200px;
     margin-left: auto;
     margin-right: auto; }
+    .photo__gallery__wrapper a {
+      position: relative;
+      width: 49.3%;
+      margin-left: 0.5%;
+      float: left;
+      margin-bottom: -4px;
+      display: block; }
+      .photo__gallery__wrapper a:hover::after {
+        opacity: 1; }
+      .photo__gallery__wrapper a::after {
+        display: block;
+        content: url("http://www.farmfestival.co.uk/wp-content/uploads/2016/02/expand.png");
+        width: 35px;
+        height: 35px;
+        background-color: #302784;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        padding-left: 14px;
+        padding-top: 13px;
+        border-radius: 50%;
+        opacity: 0; }
     .photo__gallery__wrapper .video iframe {
       width: 1189px;
       margin-left: 6px; }
     .photo__gallery__wrapper p {
       margin-bottom: 10px; }
     .photo__gallery__wrapper img {
-      width: 49.3%;
-      margin-left: 0.5%;
+      width: 100%;
+      margin-left: none;
       float: left;
-      margin-bottom: 10px; }
+      margin-bottom: none; }
   footer {
     background-color: #302784;
     height: 610px;
@@ -3112,8 +3246,9 @@ a {
       width: 1200px;
       margin-left: auto;
       margin-right: auto;
-      overflow: auto; }
+      overflow: hidden; }
       footer .footer__wrapper .logos {
+        overflow: auto;
         padding-top: 50px; }
         footer .footer__wrapper .logos ul {
           width: max-content;
@@ -3163,6 +3298,13 @@ a {
             footer .footer__wrapper .cta ul li a {
               text-decoration: none !important;
               font-style: normal; }
+      footer .footer__wrapper .credit {
+        margin-top: 20px;
+        height: max-content;
+        text-align: center; }
+        footer .footer__wrapper .credit p {
+          color: white;
+          font-size: calc(20px); }
       footer .footer__wrapper .social__media {
         border-bottom: 1px solid white;
         overflow: auto;
@@ -3368,7 +3510,7 @@ a {
   .manifesto {
     position: absolute;
     bottom: 50px;
-    z-index: 9000000;
+    z-index: 10;
     width: 100%;
     text-align: center;
     font-family: 'normalise_din_mnregular';
@@ -3417,6 +3559,8 @@ a {
       .manifesto__wrapper .manifesto__container a {
         font-size: 16px;
         margin-top: 20px; }
+  .ethos .single__menu.desktop .menu {
+    visibility: hidden; }
   .line-up, .latest, .tickets {
     padding-top: 170px; }
     .line-up .desktop, .latest .desktop, .tickets .desktop {
@@ -3446,7 +3590,7 @@ a {
         margin-top: -70px;
         margin-left: 0px; }
         header.desktop .logo img {
-          width: 100%;
+          width: 90%;
           height: auto;
           display: block; }
       header.desktop.coloured {
@@ -3463,19 +3607,26 @@ a {
           -moz-transition: all 0.3s ease-in-out;
           -o-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out; }
-        header.desktop.coloured .desktop__logo h1 {
-          color: #302784;
-          opacity: 0; }
-        header.desktop.coloured .desktop__logo svg path {
-          fill: #302784; }
-        header.desktop.coloured .desktop__options .section__divide {
-          border-bottom: 2px dashed #302784; }
-        header.desktop.coloured .desktop__options h1 {
-          color: #302784; }
-        header.desktop.coloured .desktop__buy .buy__button__desktop {
-          border: 3px solid #302784; }
-          header.desktop.coloured .desktop__buy .buy__button__desktop h1 {
+        header.desktop.coloured .desktop__logo {
+          width: 19%; }
+          header.desktop.coloured .desktop__logo h1 {
+            color: #302784;
+            opacity: 0; }
+          header.desktop.coloured .desktop__logo svg path {
+            fill: #302784; }
+        header.desktop.coloured .desktop__options {
+          width: 61%; }
+          header.desktop.coloured .desktop__options .section__divide {
+            border-bottom: 2px dashed #302784; }
+          header.desktop.coloured .desktop__options h1 {
             color: #302784; }
+        header.desktop.coloured .desktop__buy {
+          width: 19%;
+          margin-left: -24px; }
+          header.desktop.coloured .desktop__buy .buy__button__desktop {
+            border: 3px solid #302784; }
+            header.desktop.coloured .desktop__buy .buy__button__desktop h1 {
+              color: #302784; }
         header.desktop.coloured li.current_page_item {
           background-color: white;
           padding: 5px 4px 3px 2px;
@@ -3497,10 +3648,10 @@ a {
       header .desktop__options h1 {
         margin-left: auto;
         margin-right: auto;
-        width: max-content;
+        width: intrinsic;
         margin-bottom: 5px; }
       header .desktop__options ul {
-        width: max-content;
+        width: intrinsic;
         margin-left: auto;
         margin-right: auto;
         overflow: hidden;
@@ -3886,7 +4037,6 @@ a {
         float: left;
         width: 48.8%;
         margin-right: 1%;
-        border-right: 1px solid #302784;
         padding-right: 1%; }
       .line__up__wrapper ul.saturday {
         float: left;
@@ -3976,13 +4126,15 @@ a {
           width: 49.9%;
           margin-right: 0.1%;
           float: left;
-          color: #302784; }
+          color: #302784;
+          margin-bottom: 2px;
+          margin-top: 2px; }
           .line__up__wrapper ul li.category-medium:hover img {
             opacity: 0.2; }
           .line__up__wrapper ul li.category-medium .post--wrapper {
             margin-right: 2px;
             position: relative;
-            min-height: 122px; }
+            min-height: 151px; }
             .line__up__wrapper ul li.category-medium .post--wrapper .overlay {
               position: absolute;
               background-color: rgba(0, 0, 0, 0.2);
@@ -4111,7 +4263,7 @@ a {
       footer .footer__wrapper .logos {
         padding-top: 50px; }
         footer .footer__wrapper .logos ul {
-          width: max-content;
+          width: intrinsic;
           margin-left: auto;
           margin-right: auto; }
           footer .footer__wrapper .logos ul li {
@@ -4145,7 +4297,7 @@ a {
             background-color: white;
             color: #302784; }
         footer .footer__wrapper .cta ul {
-          width: max-content;
+          width: intrinsic;
           margin-left: auto;
           margin-right: auto; }
           footer .footer__wrapper .cta ul li {
@@ -4158,7 +4310,7 @@ a {
         overflow: auto;
         padding: 50px 0 50px 0px; }
         footer .footer__wrapper .social__media ul {
-          width: max-content;
+          width: intrinsic;
           margin-left: auto;
           margin-right: auto; }
           footer .footer__wrapper .social__media ul li {
@@ -4413,7 +4565,8 @@ a {
     font-family: 'normalise_din_mnregular';
     font-weight: normal;
     font-size: 20px;
-    font-style: normal !important; }
+    font-style: normal !important;
+    display: none; }
     .mailchimp__wrapper .mailchimp__container {
       width: 1200px;
       margin-left: auto;
@@ -4504,6 +4657,7 @@ a {
             margin-top: 10px; }
           .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider p {
             font-size: calc(18px * 3);
+            line-height: calc(20px * 3);
             margin-left: 10px;
             margin-bottom: 90px; }
           .ticket__provider__container .ticket__provider__left ul.ticket__provider__wrapper li.ticket__provider h2 {
@@ -4562,12 +4716,14 @@ a {
           margin-right: 2px;
           margin-top: 10px;
           opacity: 0.3; }
+          .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .prices__wrapper .ticket__prices .price__type, .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .prices__wrapper .ticket__prices .price {
+            font-size: calc(18px * 3); }
           .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .prices__wrapper h2 {
             font-size: calc(26px * 3);
             width: 98%;
             padding-left: 2.5%; }
           .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .prices__wrapper p {
-            font-size: calc(18px * 3);
+            font-size: calc(26px * 3);
             margin-left: 2%; }
           .ticket__price__container .ticket__price__left ul.ticket__price__wrapper li.ticket__price .stage_name {
             color: #302784;
@@ -4796,6 +4952,8 @@ a {
     background-size: cover;
     color: white;
     position: relative; }
+    .carousel__wrapper .arrow {
+      display: none; }
     .carousel__wrapper .gradient {
       position: absolute;
       height: 920px;
@@ -4968,8 +5126,9 @@ a {
           font-size: calc(11px * 3); }
         .news__wrapper ul li h4 {
           margin-bottom: 30px;
+          margin-top: 20px;
           font-size: calc(26px * 3);
-          line-height: calc(26px * 3); }
+          line-height: calc(30px * 3); }
         .news__wrapper ul li:after {
           content: "";
           height: 1px;
@@ -5112,23 +5271,42 @@ a {
     margin-left: auto;
     margin-right: auto;
     width: 96%; }
+    .photo__gallery__wrapper a {
+      width: 99.3%;
+      margin-left: 0.5%;
+      float: none;
+      position: relative;
+      display: block; }
+      .photo__gallery__wrapper a::after {
+        display: block;
+        content: url("http://www.farmfestival.co.uk/wp-content/uploads/2016/02/expand_mobile.png");
+        width: calc(33px * 3);
+        height: calc(33px * 3);
+        background-color: #302784;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        padding-left: calc(16px * 3);
+        padding-top: calc(14px * 3);
+        border-radius: 50%;
+        opacity: 1; }
     .photo__gallery__wrapper .video iframe {
       width: 99.7%;
       margin-left: 0px; }
     .photo__gallery__wrapper img {
-      width: 99.3%;
-      margin-left: 0.5%;
-      float: left; }
+      width: 100%;
+      margin-left: none;
+      float: none; }
   #single__background__image {
     background: no-repeat center fixed #302784;
-    background-position-y: -400px;
-    height: 500px;
+    background-position-y: 190px;
+    height: 460px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: 100%;
     position: relative;
-    margin-top: 270px; }
+    margin-top: 254px; }
     #single__background__image .single__title__wrapper {
       position: absolute;
       bottom: 20px;
@@ -5328,10 +5506,19 @@ a {
       margin-top: -100px; }
     .ethos .hamburger__menu.mobile, .line-up .latest .hamburger__menu.mobile {
       margin-top: 0px; }
+  .ethos header .sub__nav {
+    display: none; }
+  .ethos #single__background__image {
+    margin-top: 154px; }
   footer {
     background-color: #302784;
-    height: 56vh;
+    height: 70vh;
     margin-top: 0px; }
+    footer .footer__wrapper .credit {
+      text-align: center; }
+      footer .footer__wrapper .credit p {
+        color: white;
+        font-size: calc(20px * 3); }
     footer .footer__wrapper .social__media ul li {
       width: 21vw;
       height: 21vw;
@@ -5351,8 +5538,11 @@ a {
           text-decoration: none; }
       footer .footer__wrapper .cta ul button {
         font-size: calc(20px * 3); }
-    footer .footer__wrapper .logos ul li {
-      width: 230px; }
+    footer .footer__wrapper .logos {
+      overflow: auto;
+      margin-bottom: 80px; }
+      footer .footer__wrapper .logos ul li {
+        width: 230px; }
     footer .footer__wrapper {
       margin-left: auto;
       margin-right: auto;

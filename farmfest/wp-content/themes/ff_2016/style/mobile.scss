@@ -1,4 +1,4 @@
-@media screen and ($break-prod: $break-mobile) {
+@media screen and ($break-prod: $break-mobile){
 	
 	//mobile
 	
@@ -24,6 +24,7 @@
 		width: 100%;
 		z-index: 20000;
 		margin-top: -270px;
+		
 		
 		&.desktop{
 			display: none;
@@ -298,6 +299,10 @@
 		color: white;
 		position: relative;
 		
+		.arrow{
+			display: none;
+		}
+		
 		.gradient{
 			position: absolute;
 		    height: 920px;
@@ -543,8 +548,9 @@
 				
 				h4{
 					margin-bottom: 30px;
+					margin-top: 20px;
 					font-size: calc(#{$medium} * #{$multiplier});
-					line-height: calc(#{$medium} * #{$multiplier});
+					line-height: calc(#{$medium + 4} * #{$multiplier});
 				}
 				
 				&:after{
@@ -770,7 +776,29 @@
 		min-height: 310px;
 		width: 100%;
 		@include width-mobile();
+		
+		a{
+			width: 99.3%;
+			margin-left: 0.5%;
+			float: none;	
+			position: relative;
+			display: block;
 			
+			&::after{
+				display: block;
+				content:url('http://www.farmfestival.co.uk/wp-content/uploads/2016/02/expand_mobile.png');
+				width: calc(33px * #{$multiplier});
+				height: calc(33px * #{$multiplier});
+				background-color: $primary-colour;
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				padding-left: calc(16px * #{$multiplier});
+				padding-top: calc(14px * #{$multiplier});
+				border-radius: 50%;
+				opacity: 1;
+			}
+		}	
 		
 		.video{
 			iframe{
@@ -780,10 +808,14 @@
 		}	
 			
 		img{
-			width: 99.3%;
-			margin-left: 0.5%;
-			float: left;
+			width: 100%;
+			margin-left: none;
+			float: none;
 		}
+		
+	}
+	
+	#swipebox-close{
 		
 	}
 	
@@ -791,14 +823,14 @@
 	
 	#single__background__image{
 		background: no-repeat center fixed $primary-colour;
-		background-position-y: -400px;
-		height: 500px;
+		background-position-y: 190px;
+		height: 460px;
 		-webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
-	    background-size: cover;
+	    background-size: 100%;
 	    position: relative;
-	    margin-top: 270px;
+	    margin-top: 254px;
 	    
 	    .single__title__wrapper{
 	    	position: absolute;
@@ -1100,11 +1132,34 @@
 		}
 	} 
 	
+	.ethos{
+		header{
+			.sub__nav{
+				display: none;
+			}
+		}
+	}
+	
+	.ethos{
+		#single__background__image{
+			margin-top: 154px;
+		}
+	}
+	
 	footer{
 		background-color: $primary-colour;
-		height: 56vh;
+		height: 70vh;
 		margin-top: 0px;
 		.footer__wrapper{
+			
+			.credit{
+				text-align: center;
+				p{
+					color: white;
+					font-size: calc(#{$regular} * #{$multiplier});
+				}
+			}
+			
 			.social__media{
 				ul{
 					li{
@@ -1145,6 +1200,8 @@
 		}
 		
 		.logos{
+			overflow: auto;
+			margin-bottom: 80px;
 			ul{
 				li{
 					width: 230px;
