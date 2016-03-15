@@ -7,13 +7,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/carousel.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/main.js"></script>
+<script src="<?php bloginfo('template_url') ?>/js/gallery.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/swipebox/src/js/jquery.swipebox.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/stellar.js/src/jquery.stellar.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/js.cookie.js"></script>
-<script src="<?php bloginfo('template_url') ?>/js/facebook.js"></script>
+<!-- <script src="<?php bloginfo('template_url') ?>/js/facebook.js"></script> -->
 <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
 <body>
-<div id="fb-root"></div>	
+<!-- <div id="fb-root"></div>	 -->
 <header class="mobile">
 	<div class="hamburger"></div>
 	<div class="page__title">

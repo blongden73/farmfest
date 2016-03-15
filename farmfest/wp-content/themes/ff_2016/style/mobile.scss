@@ -772,6 +772,15 @@
 	
 	//photos
 	
+	.video__wrapper{			
+			.photo__gallery__wrapper{
+				iframe{
+					width: 99.7%;
+					margin-left: 0px;
+				}
+			}
+		}
+	
 	.photo__gallery__wrapper{
 		min-height: 310px;
 		width: 100%;
@@ -781,7 +790,7 @@
 			width: 99.3%;
 			margin-left: 0.5%;
 			float: none;	
-			position: relative;
+			position: absolute;
 			display: block;
 			
 			&::after{
@@ -798,14 +807,7 @@
 				border-radius: 50%;
 				opacity: 1;
 			}
-		}	
-		
-		.video{
-			iframe{
-				width: 99.7%;
-				margin-left: 0px;
-			}
-		}	
+		}		
 			
 		img{
 			width: 100%;
@@ -1094,14 +1096,14 @@
 			
 			h1{
 				
-				font-size: calc(#{$large} * #{$multiplier}) ;
+				font-size: calc(#{$medium} * #{$multiplier}) ;
 				margin-bottom: 20px;
 				
 			}
 			
 			p{	
-				font-size: calc(#{$regular} * #{$multiplier}) ;
-				line-height: calc(#{$regular} * #{$multiplier});
+				font-size: calc(#{$base} * #{$multiplier}) ;
+				line-height: calc(#{$base} * #{$multiplier});
 				margin-bottom: 40px;
 			}
 			

@@ -1,5 +1,5 @@
 <div class="photo__gallery__wrapper">
-<?php query_posts('cat=28,8'); ?>
+<?php query_posts('cat=28'); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<?php the_content() ?>

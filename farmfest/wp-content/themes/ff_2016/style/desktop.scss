@@ -1184,20 +1184,21 @@
 	
 	//photos
 	
+	.video__wrapper{
+		.photo__gallery__wrapper{
+			&::after{
+				display: none;
+			}
+		}
+	}
+	
 	.photo__gallery__wrapper{
-		min-height: 1276px;
+		min-height: 581px;
 		width: 100%;
 		@include width-desktop();
+		position: relative;
 		
-		a{
-			position: relative;
-			width: 49.3%;
-			margin-left: 0.5%;
-			float: left;
-			margin-bottom: -4px;
-			display: block;
-			
-			&:hover{
+		&:hover{
 				&::after{
 					opacity: 1;
 				}
@@ -1216,6 +1217,23 @@
 				padding-top: 13px;
 				border-radius: 50%;
 				opacity: 0;
+				z-index: 1000000;
+			}
+		
+		
+		a{
+			position: absolute;
+			width: 100%;
+			float: left;
+			margin-bottom: -4px;
+			display: block;
+			opacity: 0;
+			@include transition(1s);
+
+			
+			&.show{
+				opacity: 1;
+				@include transition(1s);
 			}
 		}
 		
@@ -1727,7 +1745,15 @@
 	}
 		
 	//this sets the height of the offset on the individual pages
-	.line-up, .latest, .tickets{
+	.tickets{
+		padding-top: 100px;
+		
+		.desktop{
+			margin-top: -100px;
+		}
+	}
+	
+	.line-up, .latest{
 		padding-top: 170px;
 		
 		.desktop{

@@ -34,7 +34,7 @@
 				margin-left: 0px;
 				
 				img{
-					width: 100%;
+					width: 90%;
 					height: auto;
 					display: block;
 				}
@@ -424,7 +424,7 @@
 	
 	.illustration__panel--photos{
 		padding-top: 0px;
-		height: 168px;
+		height: 350px;
 		margin-top: 0px;
 		background: url('http://www.farmfestival.co.uk/wp-content/uploads/2016/02/clouds_two_background1.png');
 		z-index: -2000;
@@ -976,11 +976,19 @@
 	}
 	
 	//photos
+	.video__wrapper{
+		.photo__gallery__wrapper{
+			&::after{
+				display: none;
+			}
+		}
+	}
 	
 	.photo__gallery__wrapper{
-		min-height: 1216px;
+		min-height: 465px;
 		width: 100%;
 		@include width-960();
+		position: relative;
 		
 		.video{
 			iframe{
@@ -992,12 +1000,28 @@
 		p{
 		margin-bottom: 10px;	
 		}
+		
+		a{
+			position: absolute;
+			width: 100%;
+			float: left;
+			margin-bottom: -4px;
+			display: block;
+			opacity: 0;
+			@include transition(1s);
+
+			
+			&.show{
+				opacity: 1;
+				@include transition(1s);
+			}
+		}
 			
 		img{
-			width: 49.3%;
-			margin-left: 0.5%;
+			width: 100%;
+			margin-left: none;
 			float: left;
-			margin-bottom: 10px;
+			margin-bottom: none;
 		}
 		
 	}
@@ -1520,7 +1544,15 @@
 	}
 		
 	//this sets the height of the offset on the individual pages
-	.line-up, .latest, .tickets{
+	.tickets{
+		padding-top: 100px;
+		
+		.desktop{
+			margin-top: -100px;
+		}
+	}
+	
+	.line-up, .latest{
 		padding-top: 170px;
 		
 		.desktop{
