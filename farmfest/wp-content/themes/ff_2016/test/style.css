@@ -1248,12 +1248,6 @@ a {
         margin-top: 20px;
         margin-bottom: 20px; }
       #single__wrapper .single__content li {
-        list-style: url("http:http://www.farmfestival.co.uk/wp-content/uploads/2016/01/lightening.png");
-        font-family: 'normalise_din_mnregular';
-        font-weight: normal;
-        font-size: calc(26px);
-        font-style: normal !important;
-        color: #302784;
         margin-top: 5px; }
       #single__wrapper .single__content img {
         width: 100%;
@@ -1279,7 +1273,7 @@ a {
           margin-right: 20px; }
   .manifesto {
     position: absolute;
-    bottom: 50px;
+    bottom: 130px;
     z-index: 9000000;
     width: 100%;
     text-align: center;
@@ -2311,12 +2305,6 @@ a {
         margin-top: 20px;
         margin-bottom: 20px; }
       #single__wrapper .single__content li {
-        list-style: url("http:http://www.farmfestival.co.uk/wp-content/uploads/2016/01/lightening.png");
-        font-family: 'normalise_din_mnregular';
-        font-weight: normal;
-        font-size: calc(26px);
-        font-style: normal !important;
-        color: #302784;
         margin-top: 5px; }
       #single__wrapper .single__content img {
         width: 100%;
@@ -2342,7 +2330,7 @@ a {
           margin-right: 20px; }
   .manifesto {
     position: absolute;
-    bottom: 50px;
+    bottom: 130px;
     z-index: 9000000;
     width: 100%;
     text-align: center;
@@ -2656,12 +2644,13 @@ a {
       top: 520px; } }
     .carousel__wrapper .arrow {
       margin: auto;
+      margin-bottom: 0;
       position: absolute;
       top: 500px;
       left: 0;
       bottom: 0;
       right: 0;
-      height: 100px;
+      height: 90px;
       width: 50px;
       z-index: 10;
       animation-duration: 1s;
@@ -2858,7 +2847,7 @@ a {
         margin-right: 0.2%;
         margin-left: 0px;
         height: max-content;
-        min-height: inherit;
+        min-height: 341px;
         margin-bottom: inherit;
         position: relative;
         border-bottom: 1px solid #B0B0B0;
@@ -3199,10 +3188,9 @@ a {
     font-style: normal !important;
     display: block; }
     .mailchimp__wrapper .mailchimp__container {
-      width: 1200px;
       margin-left: auto;
       margin-right: auto;
-      width: intrinsic !important;
+      width: 440px;
       padding: 10px 0px 0px 0px; }
       .mailchimp__wrapper .mailchimp__container .indicates-required {
         font-size: 16px;
@@ -3464,6 +3452,17 @@ a {
         height: 250px;
         overflow: hidden;
         display: block; }
+    #single__wrapper.category-feature .single__image {
+      width: 600px;
+      margin-bottom: 20px;
+      position: relative;
+      min-height: 40px;
+      margin-left: 260px;
+      height: 340px;
+      overflow: hidden;
+      display: block; }
+    #single__wrapper.category-feature .single__menu {
+      margin-top: -193px; }
     #single__wrapper.category-line-up {
       margin-top: -150px; }
       #single__wrapper.category-line-up .single__image {
@@ -3529,23 +3528,40 @@ a {
         color: #302784; }
         #single__wrapper .single__content h1:first-of-type {
           margin-top: 0px; }
-      #single__wrapper .single__content p {
+      #single__wrapper .single__content h2 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 18px;
+        line-height: calc(20px);
+        font-style: italic;
+        margin-top: -15px;
+        margin-bottom: 20px;
         color: #383838; }
+      #single__wrapper .single__content blue {
+        color: #302784 !important; }
+      #single__wrapper .single__content em {
+        font-style: italic; }
+      #single__wrapper .single__content strong {
+        font-weight: 700; }
+      #single__wrapper .single__content p {
+        color: #383838;
+        font-size: 16px;
+        line-height: 24px; }
       #single__wrapper .single__content a {
         color: #302784; }
       #single__wrapper .single__content iframe {
         margin-top: 20px; }
       #single__wrapper .single__content ul {
-        margin-top: 20px;
+        margin-top: -6px;
         margin-bottom: 20px; }
       #single__wrapper .single__content li {
-        list-style: url("http:http://www.farmfestival.co.uk/wp-content/uploads/2016/01/lightening.png");
-        font-family: 'normalise_din_mnregular';
-        font-weight: normal;
-        font-size: calc(26px);
-        font-style: normal !important;
-        color: #302784;
-        margin-top: 5px; }
+        font-family: 'Libre Baskerville', serif;
+        font-size: 16px;
+        line-height: 24px;
+        list-style: disc;
+        margin-top: 5px;
+        list-style-position: outside;
+        margin-left: 20px;
+        color: #383838; }
       #single__wrapper .single__content img {
         width: 100%;
         height: auto;
@@ -3555,22 +3571,37 @@ a {
         margin-bottom: 20px; }
       #single__wrapper .single__content blockquote {
         margin-top: 10px;
-        margin-left: -175px; }
+        margin-left: -55px; }
         #single__wrapper .single__content blockquote p {
-          font-family: 'normalise_din_mnregular';
-          font-weight: normal;
-          font-size: calc(34px);
-          font-style: normal !important;
+          font-family: 'Libre Baskerville', serif;
+          font-size: 18px;
           color: #302784;
           margin-bottom: 30px;
           margin-top: 5px;
-          line-height: calc(34px); }
+          line-height: calc(24px);
+          margin-bottom: 0px; }
+        #single__wrapper .single__content blockquote strong {
+          font-family: 'normalise_din_mnregular';
+          font-weight: normal;
+          font-size: calc(16px);
+          font-style: normal !important;
+          margin-top: 10px;
+          text-transform: uppercase;
+          line-height: 36px; }
         #single__wrapper .single__content blockquote:before {
-          content: url("http://http://www.farmfestival.co.uk/wp-content/uploads/2016/01/lightening_quote.png");
-          margin-right: 20px; }
+          margin-bottom: 20px; }
+        #single__wrapper .single__content blockquote:after {
+          margin-top: 10px; }
+        #single__wrapper .single__content blockquote:before, #single__wrapper .single__content blockquote:after {
+          content: "";
+          display: block;
+          width: 200px;
+          background-color: #302784;
+          height: 2px;
+          margin-left: -15px; }
   .manifesto {
     position: absolute;
-    bottom: 50px;
+    bottom: 130px;
     z-index: 10;
     width: 100%;
     text-align: center;

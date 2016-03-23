@@ -1,6 +1,6 @@
 <div class="news__wrapper">
 	<ul>
-<?php query_posts('cat=25,24&showposts=8'); ?>
+<?php query_posts('cat=25,24'); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<li>

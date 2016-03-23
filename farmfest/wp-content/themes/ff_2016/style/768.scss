@@ -1366,9 +1366,6 @@
 			}
 			
 			li{
-				list-style: url('http:http://www.farmfestival.co.uk/wp-content/uploads/2016/01/lightening.png');
-				@include type(calc(#{$medium}));
-				color: $primary-colour;
 				margin-top: 5px;
 			}
 			
@@ -1408,7 +1405,7 @@
 	
 	.manifesto{
 		position: absolute;
-		bottom: 50px;
+		bottom: 130px;
 		z-index: 9000000;
 		width: 100%;
 		text-align: center;

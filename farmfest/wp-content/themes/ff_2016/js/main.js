@@ -126,6 +126,7 @@ $(function (){
 		ticketProviderClass();
 	}
 	
+	
 	//click cross for pop up
 	$( ".close__facebook" ).click(function() {
 		console.log('clicking');

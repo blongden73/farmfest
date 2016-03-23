@@ -308,12 +308,13 @@
 		
 		.arrow{
 			margin: auto;
+			margin-bottom: 0;
 			position: absolute;
 			top: 500px; 
 			left: 0; 
 			bottom: 0; 
 			right: 0;
-			height: 100px;
+			height: 90px;
 			width: 50px;
 			z-index: 10;
 			animation-duration: 1s;
@@ -593,7 +594,7 @@
 				margin-right: 0.2%;
 				margin-left: 0px;
 				height: max-content;
-				min-height:inherit;
+				min-height:341px;
 				margin-bottom: inherit;
 				position: relative;
 				border-bottom: 1px solid $grey;
@@ -1120,8 +1121,9 @@
 		display: block;
 		
 		.mailchimp__container{
-			@include width-desktop();
-			width: intrinsic !important;
+			margin-left: auto;
+			margin-right: auto;
+			width: 440px;
 			padding: 10px 0px 0px 0px;
 			
 			.indicates-required{
@@ -1484,6 +1486,24 @@
 
 		}
 		
+		&.category-feature{
+			.single__image{
+			width: 600px;
+			margin-bottom: 20px;
+			position: relative;
+			min-height: 40px;
+			margin-left: 260px;
+			height: 340px;
+			overflow: hidden;
+			display: block;
+			}
+			
+			.single__menu{
+				margin-top: -193px;
+			}
+		}
+		
+		
 		&.category-line-up{
 			margin-top: -150px;
 			
@@ -1599,8 +1619,32 @@
 				}
 			}
 			
+			h2{
+				font-family: 'Libre Baskerville', serif;
+				font-size: $base;
+				line-height: calc(#{$regular});
+				font-style: italic;
+				margin-top: -15px;
+				margin-bottom: 20px;
+				color: #383838;
+			}
+			
+			blue{
+				color: #302784 !important;
+			}
+			
+			em{
+				font-style: italic;
+			}
+			
+			strong{
+				font-weight: 700;
+			}
+			
 			p{
 				color: $black;
+			    font-size: $small;
+				line-height: $sub-med;
 			}
 			
 			a{
@@ -1612,15 +1656,19 @@
 			}
 			
 			ul{
-				margin-top: 20px;
+				margin-top: -6px;
 				margin-bottom: 20px;
 			}
 			
 			li{
-				list-style: url('http:http://www.farmfestival.co.uk/wp-content/uploads/2016/01/lightening.png');
-				@include type(calc(#{$medium}));
-				color: $primary-colour;
+				font-family: 'Libre Baskerville', serif;
+				font-size: $small;
+				line-height: $sub-med;
+				list-style: disc;
 				margin-top: 5px;
+				list-style-position: outside;
+				margin-left: 20px;
+				color: $black;
 			}
 			
 			img{
@@ -1636,19 +1684,41 @@
 			
 			blockquote{
 				margin-top: 10px;
-				margin-left: -175px;
+				margin-left: -55px;
 				
 				p{
-					@include type(calc(#{$large}));
+					font-family: 'Libre Baskerville', serif;
+					font-size: $base;
 					color: $primary-colour;
 					margin-bottom: 30px;
 					margin-top: 5px;
-					line-height: calc(#{$large})
+					line-height: calc(#{$sub-med});
+					margin-bottom: 0px;
+				}
+				
+				strong{
+					@include type(calc(#{$small}));
+					margin-top: 10px;
+					text-transform: uppercase;
+					line-height: 36px;
+					// margin-left: -16px;
 				}
 				
 				&:before{
-					content: url('http://http://www.farmfestival.co.uk/wp-content/uploads/2016/01/lightening_quote.png');
-					margin-right: 20px;
+					margin-bottom: 20px;
+				}
+				
+				&:after{
+					margin-top: 10px;
+				}
+				
+				&:before, &:after{
+					content:"";
+					display: block;
+					width: 200px;
+					background-color: $primary-colour;
+					height: 2px;
+					margin-left: -15px;
 				}
 			}
 		}
@@ -1659,7 +1729,7 @@
 	
 	.manifesto{
 		position: absolute;
-		bottom: 50px;
+		bottom: 130px;
 		z-index: 10;
 		width: 100%;
 		text-align: center;
