@@ -284,6 +284,8 @@
 		}
 	}
 	
+	
+	
   
 	//Carousel
 	
@@ -298,6 +300,23 @@
 		background-size: cover;
 		color: white;
 		position: relative;
+		
+		.mobile__date{
+		background-color: $primary-colour;
+		height: 80px;
+		width: 100%;
+		color: white;
+		@include type(calc(#{$date} * #{$multiplier}));
+		position: absolute;
+		top: 256px;
+		z-index: 500;
+		text-align: center;
+		padding-top: 30px;
+		
+		&.mobile{
+			display: block;
+		}
+	}
 		
 		.arrow{
 			display: none;

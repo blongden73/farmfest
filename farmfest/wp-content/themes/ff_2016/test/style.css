@@ -5048,6 +5048,22 @@ a {
     background-size: cover;
     color: white;
     position: relative; }
+    .carousel__wrapper .mobile__date {
+      background-color: #302784;
+      height: 80px;
+      width: 100%;
+      color: white;
+      font-family: 'normalise_din_mnregular';
+      font-weight: normal;
+      font-size: calc(14px * 3);
+      font-style: normal !important;
+      position: absolute;
+      top: 256px;
+      z-index: 500;
+      text-align: center;
+      padding-top: 30px; }
+      .carousel__wrapper .mobile__date.mobile {
+        display: block; }
     .carousel__wrapper .arrow {
       display: none; }
     .carousel__wrapper .gradient {

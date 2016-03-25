@@ -1,4 +1,7 @@
 <div class="carousel__wrapper">
+	<div class="mobile__date mobile">
+	29th & 30th JULY 2016, GILCOME FARM, SOMERSET
+</div>
 	<div class="arrow">
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		width="51.958px" height="29.789px" viewBox="0 0 51.958 29.789" enable-background="new 0 0 51.958 29.789" xml:space="preserve">
