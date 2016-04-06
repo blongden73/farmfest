@@ -5473,10 +5473,22 @@ a {
       #single__wrapper .single__content h1 {
         font-size: calc(34px * 3);
         line-height: calc(34px * 3); }
+      #single__wrapper .single__content p {
+        line-height: calc(24px * 3); }
       #single__wrapper .single__content .single__title h1 {
         font-size: calc(34px * 3);
         margin-top: 40px;
         margin-bottom: 60px; }
+      #single__wrapper .single__content h2 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: calc(18px * 3);
+        line-height: calc(20px * 3);
+        font-style: italic;
+        margin-top: -15px;
+        margin-bottom: 20px;
+        color: #383838; }
+      #single__wrapper .single__content blue {
+        color: #302784; }
       #single__wrapper .single__content ul {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -5502,20 +5514,35 @@ a {
         width: 100%; }
       #single__wrapper .single__content blockquote {
         margin-top: 20px;
-        margin-left: 0px; }
+        margin-left: 0px;
+        font-family: 'Libre Baskerville', serif; }
         #single__wrapper .single__content blockquote p {
-          font-family: 'normalise_din_mnregular';
-          font-weight: normal;
-          font-size: calc(34px * 3);
-          font-style: normal !important;
+          font-family: 'Libre Baskerville', serif;
+          font-size: calc(18px * 3);
           color: #302784;
           margin-bottom: 30px;
           margin-top: 5px;
-          line-height: calc(34px * 3);
-          position: relative; }
+          line-height: calc(24px * 3);
+          margin-bottom: 0px; }
+        #single__wrapper .single__content blockquote strong {
+          font-family: 'normalise_din_mnregular';
+          font-weight: normal;
+          font-size: calc(16px * 3);
+          font-style: normal !important;
+          margin-top: 10px;
+          text-transform: uppercase;
+          line-height: 36px; }
         #single__wrapper .single__content blockquote:before {
-          content: url("http://localhost/wp-content/uploads/2016/01/lightening_quote.png");
-          margin-right: 20px; }
+          margin-bottom: 20px; }
+        #single__wrapper .single__content blockquote:after {
+          margin-top: 10px; }
+        #single__wrapper .single__content blockquote:before, #single__wrapper .single__content blockquote:after {
+          content: "";
+          display: block;
+          width: 200px;
+          background-color: #302784;
+          height: 2px;
+          margin-left: -15px; }
     #single__wrapper.category-line-up {
       margin-top: -210px; }
       #single__wrapper.category-line-up .single__image {

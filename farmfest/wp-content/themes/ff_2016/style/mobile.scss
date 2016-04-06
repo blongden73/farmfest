@@ -929,6 +929,10 @@
 			line-height: calc(#{$large} * #{$multiplier});
 			}
 			
+			p{
+				line-height: calc(#{$sub-med} * #{$multiplier});
+			}
+			
 			.single__title{
 				h1{
 				   font-size: calc(#{$large} * #{$multiplier});
@@ -936,7 +940,21 @@
 				   margin-bottom: 60px; 
 			    }
 			}
-
+			
+			h2{
+				font-family: 'Libre Baskerville', serif;
+				font-size: calc(#{$base * #{$multiplier}});
+				line-height: calc(#{$regular * #{$multiplier}});
+				font-style: italic;
+				margin-top: -15px;
+				margin-bottom: 20px;
+				color: #383838;
+			}
+			
+			
+			blue{
+				color: $primary-colour;
+			}
 			
 			ul{
 				margin-top: 20px;
@@ -973,19 +991,41 @@
 			blockquote{
 				margin-top: 20px;
 				margin-left: 0px;
+				font-family: 'Libre Baskerville', serif;
 				
 				p{
-					@include type(calc(#{$large} * #{$multiplier}));
+					font-family: 'Libre Baskerville', serif;
+					font-size: calc(#{$base} * #{$multiplier});
 					color: $primary-colour;
 					margin-bottom: 30px;
 					margin-top: 5px;
-					line-height: calc(#{$large} * #{$multiplier});
-					position: relative
+					line-height: calc(#{$sub-med} * #{$multiplier});
+					margin-bottom: 0px;
+				}
+				
+				strong{
+					@include type(calc(#{$small} * #{$multiplier}));
+					margin-top: 10px;
+					text-transform: uppercase;
+					line-height: 36px;
+					// margin-left: -16px;
 				}
 				
 				&:before{
-					content: url('http://localhost/wp-content/uploads/2016/01/lightening_quote.png');
-					margin-right: 20px;
+					margin-bottom: 20px;
+				}
+				
+				&:after{
+					margin-top: 10px;
+				}
+				
+				&:before, &:after{
+					content:"";
+					display: block;
+					width: 200px;
+					background-color: $primary-colour;
+					height: 2px;
+					margin-left: -15px;
 				}
 			}
 		}

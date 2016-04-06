@@ -8,7 +8,8 @@
       'header-menu' => __( 'Header Menu' ),
       'sub-menu' => __( 'Sub Menu' ),
       'sub-contact' => __( 'Sub Menu Contact' ),
-      'sub-involve' => __( 'Sub Menu Get Involved' )
+      'sub-involve' => __( 'Sub Menu Get Involved' ),
+      'sub-area' => __( 'Sub Menu Areas' )
     )
   );
 }

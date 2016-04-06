@@ -1,4 +1,4 @@
-<?php get_header('single') ?>
+<?php get_header() ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php 
 	$sub_title = get_field('sub_title');
@@ -13,10 +13,10 @@
 				<a href="http://www.farmfestival.co.uk/line-up/"><?php get_template_part('arrow__left') ?></a>
 			</div>
 			<div class="next-previous news-next">
-				<a href="http://www.farmfestival.co.uk/latest/"><?php get_template_part('arrow__left') ?></a>
+				<a href="http://www.farmfestival.co.uk/news/"><?php get_template_part('arrow__left') ?></a>
 			</div>
 			<div class="menu">
-				<?php wp_nav_menu( array( 'theme_location' => 'sub-menu' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'sub-area' ) ); ?>
 			</div>
 		</div>
 		<div class="single__content">
