@@ -12,7 +12,7 @@ $(function () {
 			console.log(photoA);
 			photoItem.eq(photoA).removeClass("show");
 			photoItem.eq(photoA).next().addClass("show");
-		    if ( photoA >= photoItem.length - 1) {
+		    if ( photoA >= photoItem.length ) {
 			    photoA = -1;
 			    photoItem.eq(0).addClass("show");        
 		    } 

@@ -21,7 +21,6 @@
 <script src="<?php bloginfo('template_url') ?>/js/swipebox/src/js/jquery.swipebox.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/stellar.js/src/jquery.stellar.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/js.cookie.js"></script>
-<?php get_template_part('tracking') ?>
 <!-- <script src="<?php bloginfo('template_url') ?>/js/facebook.js"></script> -->
 <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
 <body>
