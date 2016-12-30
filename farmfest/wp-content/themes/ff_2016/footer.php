@@ -2,16 +2,16 @@
 	<div class="footer__wrapper">
 		<div class="social__media">
 			<ul>
-				<a target="_blank" href="https://www.facebook.com/Farmfestival"><li>
+				<a href="https://www.facebook.com/Farmfestival"><li>
 				<?php get_template_part('facebook') ?>
 				</li></a>
-				<a target="_blank" href="https://twitter.com/Farmfestival"><li>
+				<a href="https://twitter.com/Farmfestival"><li>
 				<?php get_template_part('twitter') ?>
 				</li></a>
-				<a target="_blank" href="https://www.instagram.com/farmfestuk/"><li>
+				<a href="https://www.instagram.com/farmfestuk/"><li>
 				<?php get_template_part('instagram') ?>
 				</li></a>
-				<a target="_blank" href="https://vimeo.com/user19052844"><li>
+				<a href="https://vimeo.com/user19052844"><li>
 				<?php get_template_part('vimeo') ?>
 				</li></a>
 			</ul>

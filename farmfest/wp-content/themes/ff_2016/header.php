@@ -11,6 +11,7 @@
 <script src="<?php bloginfo('template_url') ?>/js/swipebox/src/js/jquery.swipebox.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/stellar.js/src/jquery.stellar.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/js.cookie.js"></script>
+<?php get_template_part('tracking') ?>
 <!-- <script src="<?php bloginfo('template_url') ?>/js/facebook.js"></script> -->
 <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
 <body>
@@ -35,6 +36,10 @@
 			<p>--Menu--</p>
 			<?php wp_nav_menu( array( 'theme_location' => 'sub-involve' ) ); ?>
 		</div>
+		<div class="sub_menu_area">
+			<p>--Menu--</p>
+			<?php wp_nav_menu( array( 'theme_location' => 'sub-area' ) ); ?>
+		</div>
 		<div class="open__close">
 			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="20px" height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
@@ -43,6 +48,19 @@
 			</svg>
 		</div>
 	</div>
+
+<!-- Hotjar Tracking Code for http://www.farmfestival.co.uk/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:345057,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
 </header>
 
 <header class="desktop">
@@ -56,7 +74,7 @@
 		</a>
 		
 		<div class="desktop__options">
-			<h1>29th & 30th JULY 2016, GILCOMBE FARM, SOMERSET, UK</h1>
+			<h1>28th & 29th JULY 2017, GILCOMBE FARM, SOMERSET, UK</h1>
 			<div class="section__divide"></div>
 			<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 		</div>	

@@ -52,7 +52,6 @@
 					
 					p{
 						margin-left: 10px;
-						line-height: calc(#{$regular});
 					}
 					
 					h2{
@@ -146,36 +145,6 @@
 						
 						p{
 							margin-left: 2%;
-							display: none;
-						}
-						
-						.ticket__prices{
-							overflow: auto;
-						}
-						
-						.price__split{
-							width: 50%;
-							float: left;
-							border-bottom: black 1px dotted;
-							margin-top: 9px;
-						}
-						
-						.price__type{
-							width: 25%;
-							padding-left: 2.5%;
-							float: left;
-							font-family: 'Libre Baskerville', serif;
-							margin-bottom: 5px;
-
-						}
-						.price{
-							width: 20%;
-							padding-right: 2.5%;
-							float: left;
-							text-align: right;
-							font-family: 'Libre Baskerville', serif;
-							margin-bottom: 5px;
-
 						}
 
 					}
@@ -192,9 +161,9 @@
 					.ticket_header{
 						color: $primary-colour;
 						width: 100%;
-						border-top: 2px $primary-colour solid;
+						border-top: 2px $primary-colour dashed;
 						padding: 10px 0px 10px 0px;
-						border-bottom: 2px $primary-colour solid;
+						border-bottom: 2px $primary-colour dashed;
 						margin-top: 10px;
 						margin-bottom: 10px;
 					}
@@ -230,10 +199,4 @@
 				}
 			}
 		}
-	}
-	
-	.tickets_small_print{
-		width: 400px;
-		margin-left: auto;
-		margin-right: auto;
 	}

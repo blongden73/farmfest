@@ -1,4 +1,4 @@
-<?php query_posts('cat=15'); ?>
+<?php query_posts('cat=29'); ?>
 	<div class="logos">
 		<ul>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
