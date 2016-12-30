@@ -1,4 +1,4 @@
-@media screen and ($break-prod: $break-mobile) {
+@media screen and ($break-prod: $break-mobile){
 	
 	//mobile
 	
@@ -12,11 +12,19 @@
 	
 	//Header
 	
+	.home{
+		header{
+			margin-top: -5px;
+		}
+	}
+	
 	header{
 		height: 260px;
-		background-color: $primary-colour;
+		background-color: white;
 		width: 100%;
 		z-index: 20000;
+		margin-top: -270px;
+		
 		
 		&.desktop{
 			display: none;
@@ -28,41 +36,92 @@
 		}
 	
 		.hamburger{
-			width: 25%;
+			width: 15%;
 			height: 160px;
 			float: left;
 		}
 		
 		.page__title{
-			width: 73%;
+			width: 30%;
 			height: 270px;
 			float: left;
-			text-align: right;
+			text-align: left;
 			padding-right: 2%;
+			
+			img{
+				width: 280px;
+			}
+			
+			a{
+				text-decoration: none;
+				font-style: normal;
+				
+				h1{
+					font-size: calc(#{$large} * #{$multiplier});
+					color: white;
+				}
+			}
+			
 		}
 		
 		.sub__nav{
-			background-color: $grey;
-			height: 200px;
+			background-color: $primary-colour;
+			height: 104px;
 			overflow: hidden;
 			float: left;
 			width: 100%;
 			display: none;
+			text-transform: uppercase;
+			color: white;
+			
+			p{
+				font-size: calc(#{$regular} * #{$multiplier});
+				text-transform: capitalize;
+			    margin-top: 24px;
+			    width: 50%;
+			    margin-left: 15px;
+			    margin-bottom: 60px;
+			    float: left;
+			}
+			
+			
+			.sub_menu_involve{
+				display: none;
+			}
+			
+			.sub_menu_contact{
+				display: none;
+			}
 			
 			&.display{
 				display: block;
 			}
 			
 			&.open{
-				height: max-content;
+				height: intrinsic;
 			}
 			
 			.open__close{
 				width: 100px;
 				height: 100px;
 				float: right;
-				background-color: blue;
+				margin-top: -135px;
+				margin-right: 20px;
+				-webkit-transition: all $animation-speed ease-in;
+				-moz-transition: all $animation-speed ease-in;
+				-o-transition: all $animation-speed ease-in;
+				transition: all $animation-speed ease-in;
 				
+				&.open{
+						-ms-transform: rotate(180deg); /* IE 9 */
+						-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+						transform: rotate(180deg);
+					}
+				
+				svg{
+					height: 80px;
+					width: 80px;
+				}
 			}
 			
 			ul{
@@ -74,7 +133,8 @@
 				
 				
 				li{
-					font-size: calc(#{$large} * #{$multiplier});
+					font-size: calc(#{$medium} * #{$multiplier});
+					margin-bottom: 30px;
 					
 					a{
 						text-decoration: none;
@@ -87,7 +147,7 @@
 		
 		&.mobile{
 			position: fixed;
-			display: none;
+			display: block;
 		}
 		
 		&.display{
@@ -96,14 +156,95 @@
 	
 	}
 	
+	.get-involved, .volunteer, .paid-roles-interships, .become-an-ambassabor, .contact {
+			header{	
+				.sub__nav{
+					display: block;
+					margin-top: -20px;
+					
+					.sub_menu{
+						display: none;
+					}
+					
+					.sub_menu_involve{
+					display: block;
+					margin-top: -7px;
+					}
+				}	
+			}
+		}
+		
+	.contact, .general-enquiries, .press-enquiries, .entertainment-application, .food-drink-application, .stalls-application, .band-dj-application{
+			header{	
+				.sub__nav{
+					display: block;
+					margin-top: -11px;
+					
+					.sub_menu{
+						display: none;
+					}
+					
+					.sub_menu_contact{
+					display: block;
+					margin-top: -7px;
+					}
+					
+					.sub_menu_involve{
+					display: none;
+					margin-top: -19px;
+					}
+				}	
+			}
+		}	
+		
+	.ethos, .info, .travel, .camping, .kids, .ticketing-issues, .disabled, .food-drink, .safety, .packing-list, .faq{
+			header{	
+				.sub__nav{
+					display: block;
+					margin-top: -19px;
+				}	
+			}
+		}	
+	
 	.hamburger__menu{
 		position: fixed;
 		top: 20px;
 		left: 20px;
-		background-color: white;
+		background-color: transparent;
 		width: 100px;
 		height: 100px;
 		z-index: 30000;
+		
+		svg{
+			width: 60px;
+			height: 60px;
+			
+			&.hamburger_button{			
+				rect{
+					fill: $primary-colour;
+				}
+			}
+			
+			&.hamburger__close{
+				display: none;
+					rect{
+						fill:white;
+					}
+			}
+		}
+		
+		&.clicked{
+			svg{
+				&.hamburger_button{
+					display: none;
+				}
+				
+				&.hamburger__close{
+					display: block;
+				}
+			}
+		}
+		
 	}
 	
 	.hamburger__overlay{
@@ -113,6 +254,11 @@
 		position: fixed;
 		z-index: 20000;
 		display: none;
+		top: 0;
+		-webkit-transition: all $animation-speed ease-in;
+		-moz-transition: all $animation-speed ease-in;
+		-o-transition: all $animation-speed ease-in;
+		transition: all $animation-speed ease-in;
 		
 		&.display{
 			display: block;
@@ -120,21 +266,31 @@
 		
 		ul{
 			@include width-mobile();
-			font-size: calc(#{$large} * #{$multiplier});
+			@include type(calc(#{$large} * #{$multiplier}));
 			color: white;
-			margin-top: 30vh;
+			margin-top: 25vh;
 			
 			li{
 			text-align: center;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+				
+				a{
+					text-decoration: none;
+					font-style: normal;
+				}
+			
 			}
 		}
 	}
+	
+	
 	
   
 	//Carousel
 	
 	.carousel__wrapper{
-		height: 85vh;
+		height: 76vh;
 		background-color: blue;
 		width: 100%;
 		background: no-repeat center center url('http://localhost/wp-content/uploads/2016/01/AlexMorgan_1.jpg');
@@ -144,6 +300,27 @@
 		background-size: cover;
 		color: white;
 		position: relative;
+		
+		.mobile__date{
+		background-color: $primary-colour;
+		height: 80px;
+		width: 100%;
+		color: white;
+		@include type(calc(#{$date} * #{$multiplier}));
+		position: absolute;
+		top: 256px;
+		z-index: 500;
+		text-align: center;
+		padding-top: 30px;
+		
+		&.mobile{
+			display: block;
+		}
+	}
+		
+		.arrow{
+			display: none;
+		}
 		
 		.gradient{
 			position: absolute;
@@ -170,8 +347,9 @@
 				@include transition(1s);
 				
 				img{
-					width: 227%;
-					margin-left: -60%;
+					width: 187%;
+					margin-left: -43%;
+					margin-top: 26vw;				
 				}
 				
 				h1{
@@ -201,21 +379,30 @@
 	
 	.buy__button{
 		height: 15vh;
-		width: 100%;
-		background-color: $primary-colour;
+		width: 50%;
+		background-color: transparent;
 		padding-top: 1vh;
 		display: block;
+		float: left;
+		
+		a{
+			text-decoration: none;
+		}
 		
 		button{
 			background: none;
-		    border: 12px white solid;
+		    border: 12px $primary-colour solid;
 		    width: 90%;
 		    margin-left: auto;
 		    margin-right: auto;
 		    display: block;
 		    height: 85%;
-		    font-size: calc(#{$large} * #{$multiplier});
-		    color: white;
+		    
+		    
+		    h1{
+			    color: $primary-colour;
+			    font-size: calc(#{$base} * #{$multiplier});
+		    }
 		    
 		    &:hover{
 			    background-color: white;
@@ -235,20 +422,20 @@
 		}
 	
 	.illustration__panel--news{
-		padding-top: 300px;
+		padding-top: 0px;
 		height: 680px;
 	}
 	
 	.illustration__panel--line{
 		padding-top: 300px;
 		height: 520px;
-		margin-top: -280px;
+		margin-top: -350px;
 	}
 	
 	.illustration__panel--photos{
 		padding-top: 300px;
 		height: 520px;
-		margin-top: -280px;
+		margin-top: -370px;
 		
 		img{
 			width: 100%;
@@ -306,6 +493,7 @@
 			
 			&.news{
 				right: -150px;
+				top: -130px;
 			}
 			
 			&.line-up{
@@ -345,6 +533,9 @@
 		min-height: 330px;
 		width: 100%;
 		
+		svg{
+			display: none;
+		}
 		
 		.news__image{
 			width: 100%;
@@ -376,7 +567,9 @@
 				
 				h4{
 					margin-bottom: 30px;
+					margin-top: 20px;
 					font-size: calc(#{$medium} * #{$multiplier});
+					line-height: calc(#{$medium + 4} * #{$multiplier});
 				}
 				
 				&:after{
@@ -413,6 +606,10 @@
 			@include width-mobile();
 			overflow: auto;
 			
+			&.friday{
+				overflow: hidden;
+			}
+			
 			.post--wrapper{
 				margin-bottom: 10px;
 			}
@@ -443,16 +640,14 @@
 			}
 			
 			li{
-				overflow: hidden;
 				float: none;
 				width: 100%;
 				
 				&.category-large{
-					margin-bottom: 10px;
 					
 					.post--wrapper{
 						position: relative;
-						min-height: 505px;
+						min-height: 500px;
 						float: none;
 						width: 100%;
 						
@@ -468,7 +663,7 @@
 					
 					.line-up__image{
 					@include line-up-image(505px , 130px);	
-					
+					height: 505px !important;
 
 						img{
 							width: 100%;
@@ -519,47 +714,42 @@
 					}
 				}
 				
+								
+				&.category-small, &.category-medium, &.category-mini{
+					word-wrap:break-word;
+				}
+				
 				&.category-medium{
-					width: max-content;
-					float: left;
-					color: $primary-colour;
+					height: 266px;
 					
 					.post--wrapper{
-						margin-right: 20px;
-						min-height: 0px;
-					}
-					
-					&.last{
-						h1{
-							&::after{
-							content: "";
-						}
-						}
-					}
-					
-					h1{
-						font-size: calc(#{$regular} * #{$multiplier});
-						color: $primary-colour;
-						padding-top: 0px;
-						padding-left: 0px;
-						position: relative;
-								
-						&::after{
-							content: " / ";
+						min-height: 272px;
+						
+						h1{	
+							width: 80%;
+							font-size: calc(#{$regular} * #{$multiplier});
 						}
 					}
 					
 					.line-up__image{
-						display: none;
-						
-						img{
-							width: 100%;
-							height: auto;
-						}
-						
-					}			
+						min-height: 259px;
+					}
 				}
 				
+				&.category-mini{
+					height: 183px;;
+					
+					.post--wrapper{
+						min-height: 272px;
+						
+						h1{
+							font-size: calc(#{$base} * #{$multiplier});
+						}
+					}
+					
+				}
+				
+								
 				&.last-medium{
 					    float: left;
 						width: 100%;
@@ -601,30 +791,67 @@
 	
 	//photos
 	
+	.video__wrapper{			
+			.photo__gallery__wrapper{
+				iframe{
+					width: 99.7%;
+					margin-left: 0px;
+				}
+			}
+		}
+	
 	.photo__gallery__wrapper{
 		min-height: 310px;
 		width: 100%;
 		@include width-mobile();
+		
+		a{
+			width: 99.3%;
+			margin-left: 0.5%;
+			float: none;	
+			position: absolute;
+			display: block;
+			
+			&::after{
+				display: block;
+				content:url('http://www.farmfestival.co.uk/wp-content/uploads/2016/02/expand_mobile.png');
+				width: calc(33px * #{$multiplier});
+				height: calc(33px * #{$multiplier});
+				background-color: $primary-colour;
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				padding-left: calc(16px * #{$multiplier});
+				padding-top: calc(14px * #{$multiplier});
+				border-radius: 50%;
+				opacity: 1;
+			}
+		}		
 			
 		img{
-			width: 49.3%;
-			margin-left: 0.5%;
-			float: left;
+			width: 100%;
+			margin-left: none;
+			float: none;
 		}
+		
+	}
+	
+	#swipebox-close{
 		
 	}
 	
 		//single
 	
-	.single__background__image{
+	#single__background__image{
 		background: no-repeat center fixed $primary-colour;
-		background-position-y: -400px;
-		height: 500px;
+		background-position-y: 190px;
+		height: 460px;
 		-webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
-	    background-size: cover;
+	    background-size: 100%;
 	    position: relative;
+	    margin-top: 254px;
 	    
 	    .single__title__wrapper{
 	    	position: absolute;
@@ -635,21 +862,33 @@
 			
 		    .single__title{
 			    @include width-mobile();
+			    h1{
+				   font-size: calc(#{$large} * #{$multiplier}); 
+			    }
 		    }
 	    
 	    }
 	    
 	}
 	
-	.single__wrapper{
+	#single__wrapper{
 		@include width-mobile();
-		margin-top: 20px;
+		margin-top: 40px;
 		font-size: calc(#{$small} * #{$multiplier});
 		line-height: calc(#{$regular} * #{$multiplier});
 		overflow: auto;
 		
+		.category-news{
+			margin-top: -220px;
+		}
+		
 		.single__image{
 			margin-bottom: 20px;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			height: 450px;
+			
 			img{
 				width: 100%;
 				height: auto;
@@ -681,9 +920,41 @@
 		}
 		
 		.single__content{
-			@include width-mobile();
+			width: 100%;
 			float: left;
 			margin-bottom: 20px;
+			
+			h1{
+			font-size: calc(#{$large} * #{$multiplier});	
+			line-height: calc(#{$large} * #{$multiplier});
+			}
+			
+			p{
+				line-height: calc(#{$sub-med} * #{$multiplier});
+			}
+			
+			.single__title{
+				h1{
+				   font-size: calc(#{$large} * #{$multiplier});
+				   margin-top: 40px;
+				   margin-bottom: 60px; 
+			    }
+			}
+			
+			h2{
+				font-family: 'Libre Baskerville', serif;
+				font-size: calc(#{$base * #{$multiplier}});
+				line-height: calc(#{$regular * #{$multiplier}});
+				font-style: italic;
+				margin-top: -15px;
+				margin-bottom: 20px;
+				color: #383838;
+			}
+			
+			
+			blue{
+				color: $primary-colour;
+			}
 			
 			ul{
 				margin-top: 20px;
@@ -713,25 +984,201 @@
 				margin-bottom: 20px;
 			}
 			
+			iframe{
+				width: 100%;
+			}
+			
 			blockquote{
 				margin-top: 20px;
 				margin-left: 0px;
+				font-family: 'Libre Baskerville', serif;
 				
 				p{
-					@include type(calc(#{$large} * #{$multiplier}));
+					font-family: 'Libre Baskerville', serif;
+					font-size: calc(#{$base} * #{$multiplier});
 					color: $primary-colour;
 					margin-bottom: 30px;
 					margin-top: 5px;
-					line-height: calc(#{$large} * #{$multiplier});
+					line-height: calc(#{$sub-med} * #{$multiplier});
+					margin-bottom: 0px;
+				}
+				
+				strong{
+					@include type(calc(#{$small} * #{$multiplier}));
+					margin-top: 10px;
+					text-transform: uppercase;
+					line-height: 36px;
+					// margin-left: -16px;
 				}
 				
 				&:before{
-					content: url('http://localhost/wp-content/uploads/2016/01/lightening_quote.png');
-					margin-right: 20px;
+					margin-bottom: 20px;
+				}
+				
+				&:after{
+					margin-top: 10px;
+				}
+				
+				&:before, &:after{
+					content:"";
+					display: block;
+					width: 200px;
+					background-color: $primary-colour;
+					height: 2px;
+					margin-left: -15px;
 				}
 			}
 		}
 		
+		&.category-line-up{
+			margin-top: -210px;
+			
+			.single__image{
+			width: 100%;
+			margin-bottom: 20px;
+			position: relative;
+			min-height: 40px;
+			margin-left: auto;
+			margin-right: auto;
+			height: 450px;
+			overflow: hidden;
+			display: block;
+			}
+		}
+		
+		&.category-news, &.category-feature{
+			margin-top: -150px;
+			
+			.single__title{
+				display: none;
+			}
+			
+			.single__menu{
+				width: 260px;
+				height: 300px;
+				margin-top: -103px;
+				
+				.next-previous{
+					&.line-up-next{
+						display: none;
+					}
+					
+					&.news-next{
+						display: block;
+					}
+					
+					svg{
+						path{
+							fill: $primary-colour;
+						}
+					}	
+				}
+				
+				.menu{
+					display: none;
+					}
+			}
+			
+			.single__image{
+			width: 100%;
+			margin-bottom: 20px;
+			position: relative;
+			min-height: 40px;
+			margin-left: auto;
+			margin-right: auto;
+			height: 450px;
+			overflow: hidden;
+			display: block;
+			}
+
+		}
+		
+	}
+	
+	//manifesto
+	
+	.manifesto{
+		position: absolute;
+		bottom: 50px;
+		z-index: 10;
+		width: 100%;
+		text-align: center;
+		@include type(calc(#{$medium} * #{$multiplier}));
+		cursor: pointer;
+		text-transform: uppercase;
+		
+		
+		&:hover{
+			h2{
+				text-decoration: underline;
+			}
+		}
+		
+	}
+	
+	.manifesto__wrapper{
+		background-color: $color-opacity;
+		height: 100vh;
+		position: fixed;
+		width: 100%;
+		z-index: 10000000;
+		display: none;
+		-webkit-transition: all $animation-speed ease-in;
+		-moz-transition: all $animation-speed ease-in;
+		-o-transition: all $animation-speed ease-in;
+		transition: all $animation-speed ease-in;
+		
+		&.display{
+			display: block;
+		}
+		
+		.manifesto__close{
+			position: absolute;
+			right: 40px;
+			top:40px;
+			cursor: pointer;
+			
+			svg{
+				width: 40px;
+				height: 40px;
+			}
+			
+		}
+		
+		.manifesto__container{
+			margin-left: auto;
+			margin-right: auto;
+			@include width-mobile();
+			color: white;
+			text-align: center;
+			margin-top: 200px;
+			
+			h1{
+				
+				font-size: calc(#{$medium} * #{$multiplier}) ;
+				margin-bottom: 20px;
+				
+			}
+			
+			p{	
+				font-size: calc(#{$base} * #{$multiplier}) ;
+				line-height: calc(#{$base} * #{$multiplier});
+				margin-bottom: 40px;
+			}
+			
+			h2{
+				margin-bottom: 20px;
+			}
+			
+			a{
+				font-size: calc(#{$regular} * #{$multiplier});
+				margin-top: 20px;
+			}
+		}
+	}
+	
+	.mailchimp__wrapper{
+		display: none;
 	}
 	
 	.ethos, .line-up .latest{
@@ -746,15 +1193,124 @@
 		}
 	} 
 	
+	.ethos{
+		header{
+			.sub__nav{
+				display: none;
+			}
+		}
+	}
+	
+	.ethos{
+		#single__background__image{
+			margin-top: 154px;
+		}
+	}
+	
 	footer{
 		background-color: $primary-colour;
-		height: 100vh;
+		height: 70vh;
 		margin-top: 0px;
+		.footer__wrapper{
+			
+			.credit{
+				text-align: center;
+				p{
+					color: white;
+					font-size: calc(#{$regular} * #{$multiplier});
+				}
+			}
+			
+			.social__media{
+				ul{
+					li{
+					    width: 21vw;
+						height: 21vw;
+						margin-right: 20px !important;
+						border: 4px solid white;
+						
+						svg{
+							width: 10vw;
+							height: 17vw;
+						}
+						
+						a{
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		
+		.cta{
+			padding: 90px 0 50px 0px;
+			ul{
+				li{
+					width: 46vw;
+					height: 24vw;
+					
+					a{
+						text-decoration: none;
+					}
+					
+				}
+				button{
+					font-size: calc(#{$regular} * #{$multiplier});
+					
+				}
+			}	
+		}
+		
+		.logos{
+			overflow: auto;
+			margin-bottom: 80px;
+			ul{
+				li{
+					width: 230px;
+				}
+			}
+		}
+				
+		}
 		
 		.footer__wrapper{
 			@include width-mobile();
 			}
 		
 	}
+	
+	.line-up, .latest, .tickets, .about{
+		padding-top: 170px;
+		
+		.illustration__panel--news{
+			.illustration__container{
+				.illustration__title{
+					margin-top: 220px;
+				}
+			}
+		}
+		
+		.illustration__panel--line{
+			.illustration__container{
+				.line-up{
+					top: -20px;
+				}
+				.illustration__title{
+					margin-top: 220px;
+				}
+			}
+		}
+		
+		header.mobile{
+			margin-top: -175px;
+		}
+		
+		#single__background__image{
+			margin-top: 0px;
+		}
+		
+		.illustration__container{
+			    margin-top: -81px;
+		}
+	}	
 
 }
