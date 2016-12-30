@@ -10,7 +10,7 @@ $(function () {
 		function timer() {
 			slide.eq(a).removeClass("fadeIn");
 			slide.eq(a).next().addClass("fadeIn");
-		    if ( a > 1 ) {
+		    if ( a > pageCheck.length - 2) {
 			    a = -1;
 			    slide.eq(0).addClass("fadeIn");        
 		    } 

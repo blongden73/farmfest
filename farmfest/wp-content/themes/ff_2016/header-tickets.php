@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html>
 <title>Farmfestival | Somerset</title>
-<meta property="og:site_name" content="Farm Festival Somerset" />
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-<meta property="og:url" content="<?php the_permalink() ?>" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="<?php the_title() ?>" />
-<meta property="og:description" content="<?php echo get_the_excerpt(); ?>" />
-<meta property="og:image" content="<?php echo $url; ?>" />
-<?php endwhile; else: ?>
-<?php endif; ?>
-<?php rewind_posts(); ?>
+<meta property="og:image" content="http://www.farmfestival.co.uk/wp-content/uploads/2016/02/FF16_GALLERY_FEATHER_2.jpg" />
 <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/style.css"/>
 <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/js/swipebox/src/css/swipebox.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -70,12 +60,7 @@
 			<h1>29th & 30th JULY 2016, GILCOMBE FARM, SOMERSET, UK</h1>
 			<div class="section__divide"></div>
 			<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-		</div>	
-		<a href="http://www.farmfestival.co.uk/tickets/">
-			<div class="desktop__buy">
-				<button class="buy__button__desktop"><h1>buy tickets</h1></button>
-			</div>
-		</a>	
+		</div>		
 	</div>
 </header>
 

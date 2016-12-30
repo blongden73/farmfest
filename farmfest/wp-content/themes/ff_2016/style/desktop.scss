@@ -16,7 +16,7 @@
 		height: 200px;
 		background-color: $primary-colour;
 		width: 100%;
-		z-index: 32;
+		z-index: 20000;
 		
 		&.desktop{
 			display: block;
@@ -26,56 +26,14 @@
 			position: fixed;
 			padding-top: 10px;
 			
-			.logo{
-				opacity: 0;
-				width: 194px;
-				height: 50px;
-				margin-top: -70px;
-				margin-left: 0px;
-				
-				img{
-					width: 100%;
-					height: auto;
-					display: block;
-				}
-			}
-			
 			&.coloured{
 				background-color: white;
 				color: $primary-colour;
-				.desktop__nav{
-					.desktop__buy{
-						&:hover{
-							.buy__button__desktop{
-								background-color: $primary-colour;
-							}
-							h1{
-								color: white;
-							}
-						}
-					}	
-				}
-				
-			.logo{
-				opacity: 1;
-				-webkit-transition: all $animation-speed ease-in;
-				-moz-transition: all $animation-speed ease-in;
-				-o-transition: all $animation-speed ease-in;
-				transition: all $animation-speed ease-in;
-			}	
-				
-			&.animated{
-				-webkit-transition: all $animation-speed ease-in-out;
-				-moz-transition: all $animation-speed ease-in-out;
-				-o-transition: all $animation-speed ease-in-out;
-				transition: all $animation-speed ease-in-out;
-			}	
 				
 				.desktop__logo{
 					
 					h1{
 						color: $primary-colour;
-						opacity: 0;
 					}
 					
 					svg{
@@ -91,14 +49,13 @@
 					border-bottom: 2px dashed $primary-colour;
 					}
 					
-					h1{	
+					h1{
 					color: $primary-colour;
 					}
 				}
 				
 				.desktop__buy{
 					.buy__button__desktop{
-						cursor: pointer;
 						border:3px solid $primary-colour;
 						h1{
 							color: $primary-colour;
@@ -150,14 +107,12 @@
 			 }
 			 
 			 li{
-				 
-				&:last-child{
-					margin-right: 0px;
-				}
-				 
 				&.current_page_item{
-					 border-bottom:2px solid $primary-colour;
-					 color: $primary-colour;
+					 background-color: $primary-colour;
+					 padding: 5px 4px 3px 2px;
+					 margin-top: -4px;
+					 display: block;
+					 color: white;
 					 
 					 a{
 						 text-decoration: none;
@@ -181,7 +136,7 @@
 					font-style: normal;
 					font-size: $large;
 					margin-top: 30px;
-					text-transform: uppercase;
+					margin-left: 20px;
 				}
 				
 				svg{
@@ -222,7 +177,7 @@
 		
 		
 		h1{
-			font-size: calc(#{$regular});
+			font-size: calc(#{$medium});
 			color: white;
 		}
 	
@@ -252,7 +207,7 @@
 		position: fixed;
 		top: 20px;
 		left: 20px;
-		background-color: transparent;
+		background-color: white;
 		width: 100px;
 		height: 100px;
 		z-index: 30000;
@@ -288,64 +243,20 @@
 	.carousel__wrapper{
 		height: 60vw;
 		width: 100%;
+// 		background: no-repeat center center url('http://localhost/wp-content/uploads/2016/01/AlexMorgan_1.jpg');
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
 		color: white;
 		position: relative;
-		overflow: hidden;
-		
-		@keyframes slidein {
-			from {
-			top: 500px;
-  			}
-
-  			to {
-		    top: 520px;
-		  	}
-		}
-		
-		.arrow{
-			margin: auto;
-			margin-bottom: 0;
-			position: absolute;
-			top: 500px; 
-			left: 0; 
-			bottom: 0; 
-			right: 0;
-			height: 90px;
-			width: 50px;
-			z-index: 10;
-			animation-duration: 1s;
-			animation-delay: 2.5s;
-			animation-name: slidein;
-			animation-iteration-count: infinite;
-			
-			&.hide{
-				opacity: 0;
-				-webkit-transition: all $animation-speed ease-in-out;
-				-moz-transition: all $animation-speed ease-in-out;
-				-o-transition: all $animation-speed ease-in-out;
-				transition: all $animation-speed ease-in-out;
-			}
-		}
-		
-		
-		&.category-hide{
-				
-					h1{
-						display: none;
-					}
-					
-					a{
-						display: none;
-					}	
-		}
 		
 		.gradient{
-			
-			display: none;
+			position: absolute;
+		    height: 640px;
+		    width: 100%;
+		    bottom: 0;
+			@include gradient();
 		}
 		
 		ul{
@@ -356,18 +267,6 @@
 
 			
 			li{
-				
-				&.category-hide{
-				
-					h1{
-						display: none;
-					}
-					
-					a{
-						display: none;
-					}	
-				}
-				
 				overflow: hidden;
 				position: absolute;
 				text-align: center;
@@ -452,23 +351,23 @@
 	
 	.illustration__panel--news{
 		padding-top: 20px;
-		height: 200px;
-		background: url('http://www.farmfestival.co.uk/wp-content/uploads/2016/02/clouds_two_background1.png');
+		height: 380px;
+		background: url('http://localhost/wp-content/uploads/2016/01/clouds_background.png');
 		z-index: -2000;
 	}
 	
 	.illustration__panel--line{
 		padding-top: 20px;
-		height: 200px;
-		background: url('http://www.farmfestival.co.uk/wp-content/uploads/2016/02/leaves_background1.png');
+		height: 380px;
+		background: url('http://localhost/wp-content/uploads/2016/01/leaves_background.png');
 		z-index: -2000;
 	}
 	
 	.illustration__panel--photos{
 		padding-top: 0px;
-		height: 200px;
-		margin-top: -30px;
-		background: url('http://www.farmfestival.co.uk/wp-content/uploads/2016/02/clouds_two_background1.png');
+		height: 380px;
+		margin-top: 0px;
+		background: url('http://localhost/wp-content/uploads/2016/01/clouds_two_background.png');
 		z-index: -2000;
 		
 		img{
@@ -477,9 +376,9 @@
 	}
 	
 	.illustration__panel--contact{
-		height: 300px;
+		height: 430px;
 		padding-top: 40px;
-		background: url('http://www.farmfestival.co.uk/wp-content/uploads/2016/02/leaves_background1.png');
+		background: url('http://localhost/wp-content/uploads/2016/01/leaves_background.png');
 		z-index: -2000;
 		
 		img{
@@ -504,18 +403,18 @@
 		h2{
 			color: $grey;
 			font-size: calc(#{$regular});
-			text-align: center;
 		}
 		
 		.illustration__title{
 			overflow: hidden;
 			height: 200px;
 			width: max-content;
+			position: absolute;
 			z-index: 10;
 			text-transform: uppercase;
-			margin-left: auto;
-			margin-right: auto;
-			margin-top: 70px;
+			margin:{
+				left: 0%;
+			}
 		}
 		.illustration{
 			overflow: hidden;	
@@ -527,24 +426,24 @@
 			
 			&.news{
 				right: -190px;
-				top: -370px;
+				top: -130px;
 			}
 			
 			&.line-up{
 				right: 0px;
-				top: -282px;
+				top: -160px;
 			}
 			
 			&.photos{
 				right: -315px;
-				bottom: -440px;
+				bottom: -610px;
 				-ms-transform: rotate(7deg); /* IE 9 */
 				-webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
 				transform: rotate(7deg);
 			}
 			
 			&.contact{
-				right: -442px;
+				right: -540px;
 				bottom: -372px;
 			}
 		}
@@ -568,17 +467,16 @@
 		min-height: 330px;
 		width: 100%;
 		
-		a{
-			.news__image{
+		
+		.news__image{
+			width: 100%;
+			margin-bottom: 10px;
+			max-height: 505px;
+			overflow: hidden;
+			
+			img{
 				width: 100%;
-				margin-bottom: 10px;
-				max-height: 505px;
-				overflow: hidden;
-				
-				img{
-					width: 100%;
-					height: auto;	
-				}
+				height: auto;	
 			}
 		}
 		
@@ -592,10 +490,7 @@
 				float: left;
 				width: 24.8%;
 				margin-right: 0.2%;
-				margin-left: 0px;
 				height: max-content;
-				min-height:341px;
-				margin-bottom: inherit;
 				position: relative;
 				border-bottom: 1px solid $grey;
 				background-color: $second-grey;
@@ -625,7 +520,6 @@
 					margin-bottom: 50px;
 					font-size: calc(#{$regular});
 					@include newsPadding();
-					line-height: $medium;
 				}
 				
 				svg{
@@ -660,116 +554,19 @@
 					h3{
 						color: white;
 					}
-					
-					h4{
-						color: white;
-					}
 				}
 			}
 		}
 		
 		a{
-			&.link{
-				font-size: calc(#{$base});
-				position: absolute;
-				bottom: -30px;
-				@include newsPadding();
-			}
+			font-size: calc(#{$base});
+			position: absolute;
+			bottom: -30px;
+			@include newsPadding();
 		}
 	}
 	
 	//Line up
-	.entertainment__wrapper{
-		@include width-desktop();
-		
-		ul{
-			.entertainment__day{
-				border-top: 3px $primary-colour solid; 
-				border-bottom: 3px $primary-colour solid; 
-				padding: 20px 0px 20px 0px;	
-				margin-bottom: 10px;
-				text-transform: uppercase;
-				
-				h1{
-				font-size: calc(#{$large});	
-				color: $primary-colour;
-				text-decoration: none !important;
-				font-style: normal !important;
-				}
-			}
-			
-			li{
-				overflow: hidden;
-				float: left;
-				
-				&.category-large{
-					width: 50%;
-					
-					&:hover{
-						img{
-							opacity: 0.2;
-						}
-					}	
-					
-					.post--wrapper{
-						position: relative;
-						float: left;
-						width: 99.5%;
-						min-height: 312px;
-						
-						.overlay{
-							position: absolute;
-							background-color: rgba(0, 0, 0, 0.2);
-							width: 100%;
-							height: 100%;
-							top: 0px;
-							z-index: 10;
-						}
-						
-						 h1{
-							position: absolute;
-							top: 10px;
-							left: 10px;
-							color: white;
-							font-size: calc(#{$large});
-							text-transform: uppercase;
-							z-index: 30;
-						}
-						
-						a{
-							text-decoration: none;
-							font-style: normal;
-						}
-						
-					}
-					
-					.line-up__image{
-					@include line-up-image(310px, 130px);
-					height: 310px !important;
-					background-color: $primary-colour;
-					
-
-						img{
-							width: 100%;
-							height: auto;
-							display: block;
-						}
-					}
-				}
-			
-				.post--wrapper{
-					
-				}	
-				
-				.entertainment__image{
-					
-				}
-				
-			}
-		}
-	}
-	
-	
 	
 	.line__up__wrapper{
 		min-height: 330px;
@@ -786,13 +583,10 @@
 				border-bottom: 3px $primary-colour solid; 
 				padding: 20px 0px 20px 0px;	
 				margin-bottom: 10px;
-				text-transform: uppercase;
 				
 				h1{
 				font-size: calc(#{$large});	
 				color: $primary-colour;
-				text-decoration: none !important;
-				font-style: normal !important;
 				}
 				}
 			
@@ -800,13 +594,13 @@
 				float: left;
 				width: 49.8%;
 				margin-right: 1%;
+				border-right: 1px solid $primary-colour;
 				padding-right: 1%;
 			}
 			
 			&.saturday{
 				float: left;
 				width: 48.1%;;
-				
 			}
 			
 			li{
@@ -816,26 +610,11 @@
 				
 				&.category-large{
 					
-					&:hover{
-						img{
-							opacity: 0.2;
-						}
-					}	
-					
 					.post--wrapper{
 						position: relative;
 						float: left;
-						width: 99.5%;
+						width: 100%;
 						min-height: 312px;
-						
-						.overlay{
-							position: absolute;
-							background-color: rgba(0, 0, 0, 0.2);
-							width: 100%;
-							height: 100%;
-							top: 0px;
-							z-index: 10;
-						}
 						
 						 h1{
 							position: absolute;
@@ -844,12 +623,6 @@
 							color: white;
 							font-size: calc(#{$large});
 							text-transform: uppercase;
-							z-index: 30;
-						}
-						
-						a{
-							text-decoration: none;
-							font-style: normal;
 						}
 						
 					}
@@ -859,6 +632,12 @@
 					height: 310px !important;
 					background-color: $primary-colour;
 					
+					
+					&:hover{
+						img{
+							opacity: 0.2;
+						}
+					}	
 
 						img{
 							width: 100%;
@@ -871,27 +650,12 @@
 				&.category-largesplit{
 					    width: 49.6%;
 						margin-right: 0.4%;
-						
-					&:hover{
-						img{
-							opacity: 0.2;
-						}
-					}
 					
 					.post--wrapper{
 						position: relative;
 						float: left;
 						width: 100%;
 						min-height: 312px;
-						
-						.overlay{
-							position: absolute;
-							background-color: rgba(0, 0, 0, 0.2);
-							width: 100%;
-							height: 100%;
-							top: 0px;
-							z-index: 10;
-						}
 						
 						 h1{
 							position: absolute;
@@ -900,26 +664,25 @@
 							color: white;
 							font-size: calc(#{$large});
 							text-transform: uppercase;
-							z-index: 30;
-						}
-						
-						a{
-							text-decoration: none;
-							font-style: normal;
 						}
 						
 					}
 					
-					
 					.line-up__image{
 					@include line-up-image(310px, 130px);
-					background-color: $primary-colour;	
+					background-color: $primary-colour;
+					
+					
+					&:hover{
+						img{
+							opacity: 0.2;
+						}
+					}	
 
 						img{
-							height: 310px;
-							width: auto;
+							height: 100%;
 							display: block;
-							margin-left: -33%;
+							margin-left: -50%;
 						}
 					}
 				}
@@ -929,30 +692,11 @@
 					margin-right: 0.1%;
 					float: left;
 					color: $primary-colour;
-					height: auto;
-					margin-bottom: 0px;
-					margin-top: 0px;
-					
-					&:hover{
-							img{
-								opacity: 0.2;
-							}
-						}
 					
 					.post--wrapper{
 						margin-right: 2px;
 						position: relative;
-						min-height: 182px;
-						
-						.overlay{
-							position: absolute;
-							background-color: rgba(0, 0, 0, 0.2);
-							width: 100%;
-							height: 100%;
-							top: 0px;
-							z-index: 10;
-						}
-						
+						min-height: 182px
 					}
 					
 					&.last{
@@ -969,91 +713,21 @@
 						padding-top: 10px;
 						padding-left: 10px;
 						position: absolute;
-						z-index: 30;
 								
 						&::after{
 							content: "";
 						}
 					}
 					
-					a{
-						text-decoration: none;
-						font-style: normal;
-					}
-					
 					.line-up__image{
 						@include line-up-image(310px, 180px);
 						background-color: $primary-colour;
-							
 						
-						img{
-							width: 100%;
-							height: auto;
-							position: absolute;
-							display: block;
-						}
-					}
-				}
-				
-				&.category-mini{
-					width: 33.23%;
-					margin-right: 0.1%;
-					float: left;
-					color: $primary-colour;
-					height: 127px;
-					margin-bottom: 2px;
-					
-					&:hover{
+						&:hover{
 							img{
 								opacity: 0.2;
 							}
-						}
-					
-					.post--wrapper{
-						margin-right: 2px;
-						position: relative;
-						min-height: 182px;
-						
-						.overlay{
-							
-						}
-					}
-					
-					&.last{
-						h1{
-							&::after{
-							content: "";
-						}
-						}
-					}
-					
-					h1{
-						font-size: calc(#{$regular});
-						color: white;
-						padding-top: 10px;
-						padding-left: 10px;
-						position: absolute;
-						z-index: 30;
-								
-						&::after{
-							content: "";
-						}
-					}
-					
-					a{
-							text-decoration: none;
-							font-style: normal;
-							
-							&:hover{
-								text-decoration: underline !important;
-							}
-							
-						}
-					
-					.line-up__image{
-						@include line-up-image(310px, 180px);
-						background-color: $primary-colour;
-							
+						}	
 						
 						img{
 							width: 100%;
@@ -1061,7 +735,9 @@
 							position: absolute;
 							display: block;
 						}
+						
 					}
+								
 				}
 				
 				&.last-medium{
@@ -1078,7 +754,7 @@
 					float: left;
 					
 					.post--wrapper{
-						margin-right: 8px;
+						margin-right: 20px;
 						color: $primary-colour;
 					}
 					
@@ -1087,15 +763,6 @@
 							&::after{
 							content: "";
 						}
-						}
-					}
-					
-					a{
-						font-style: normal;
-						text-decoration: none;
-						
-						&:hover{
-							text-decoration: underline;
 						}
 					}
 					
@@ -1112,149 +779,17 @@
 		}
 	}
 	
-	.mailchimp__wrapper{
-		background-color: $second-grey;
-		height: 400px;
-		width: 100%;
-		margin-bottom: 20px;
-		@include type($regular);	
-		display: block;
-		
-		.mailchimp__container{
-			margin-left: auto;
-			margin-right: auto;
-			width: 440px;
-			padding: 10px 0px 0px 0px;
-			
-			.indicates-required{
-				font-size: $small;
-				color: $grey;
-				margin-bottom: 20px;
-			}
-			
-			.mc-field-group{
-				margin-bottom: 10px;
-				width: 400px;
-				position: relative;
-				height: 55px;
-				
-				input{
-					height: 50px;
-					background: none;
-					border: 2px solid $primary-colour;
-					font-size: $regular;
-					outline: none;
-					stroke: none;
-					font-family: 'Libre Baskerville', serif;
-					position: absolute;
-					right: 0px;
-					
-					&:focus{
-						border: 3px solid $primary-colour;
-					}
-				}	
-			}
-			
-			.button{
-				background: none;
-				border: 3px $primary-colour solid;
-				width: 180px;
-				display: block;
-				height: 85%;
-				color: $primary-colour;
-				text-transform: uppercase; 
-				@include type(calc(#{$medium}));
-				margin-top: 20px;
-				margin-left: auto;
-				margin-right: auto;
-				
-				&:hover{
-					background-color: $primary-colour;
-					color: white;
-				}
-			}
-			
-			h1{
-				color: $primary-colour;
-				font-size: $large;
-				margin-top: 10px;
-			}
-			
-		}	
-	}
-
-	
 	//photos
 	
-	.video__wrapper{
-		.photo__gallery__wrapper{
-			&::after{
-				display: none;
-			}
-		}
-	}
-	
 	.photo__gallery__wrapper{
-		min-height: 581px;
+		min-height: 446px;
 		width: 100%;
 		@include width-desktop();
-		position: relative;
-		
-		&:hover{
-				&::after{
-					opacity: 1;
-				}
-			}
-			
-			&::after{
-				display: block;
-				content:url('http://www.farmfestival.co.uk/wp-content/uploads/2016/02/expand.png');
-				width: 35px;
-				height: 35px;
-				background-color: $primary-colour;
-				position: absolute;
-				right: 10px;
-				top: 10px;
-				padding-left: 14px;
-				padding-top: 13px;
-				border-radius: 50%;
-				opacity: 0;
-				z-index: 1000000;
-			}
-		
-		
-		a{
-			position: absolute;
-			width: 100%;
-			float: left;
-			margin-bottom: -4px;
-			display: block;
-			opacity: 0;
-			@include transition(1s);
-
-			
-			&.show{
-				opacity: 1;
-				@include transition(1s);
-			}
-		}
-		
-		.video{
-			iframe{
-				width: 1189px;
-				margin-left: 6px;
-			}
-		}
-		
-		p{
-		margin-bottom: 10px;	
-		}
 			
 		img{
-			width: 100%;
-			margin-left: none;
+			width: 49.3%;
+			margin-left: 0.5%;
 			float: left;
-			margin-bottom: none;
 		}
 		
 	}
@@ -1266,10 +801,9 @@
 		
 		.footer__wrapper{
 			@include width-desktop();
-			overflow: hidden;
+			overflow: auto;
 			
 			.logos{
-				overflow: auto;
 				padding-top: 50px;
 				ul{
 					@include list();
@@ -1277,7 +811,6 @@
 					li{
 						float: left;
 						width: 100px;
-						margin-right: 20px;
 						
 						img{
 							width: 100%;
@@ -1290,12 +823,6 @@
 			
 			
 			.cta{
-				
-				a{
-					text-decoration: none !important;
-					font-style: normal;
-				}
-				
 				border-bottom: 1px solid white;
 				overflow: auto;
 				padding: 50px 0 50px 0px;
@@ -1314,28 +841,12 @@
 				ul{
 					@include list();
 					
-					
 					li{
 						float: left;
-						width: 200px;
-						
-						a{
-						text-decoration: none !important;
-						font-style: normal;
-						}
+						width: 200px
 					}
 				}
 			}
-			
-			.credit{
-				margin-top: 20px;
-				height: max-content;
-				text-align: center;
-				p{
-					color: white;
-					font-size: calc(#{$regular});
-				}
-			}			
 			
 			.social__media{
 				border-bottom: 1px solid white;
@@ -1353,6 +864,9 @@
 						border: 2px solid white; 
 						margin-right: 5px;
 						
+						&:last-child{
+							margin-right: 0;
+						}
 						
 						svg{
 							fill:white;
@@ -1375,26 +889,23 @@
 			}
 			
 		}
+		
+		
 	}
+	
 
 	//single
 	
-	#single__background__image{
-		background: no-repeat center bottom fixed $primary-colour;
-		background-position-y: -347px;
-		height: 330px;
+	.single__background__image{
+		background: no-repeat center fixed $primary-colour;
+		background-position-y: -400px;
+		height: 500px;
 		-webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
 	    background-size: cover;
 	    position: relative;
-	    z-index: -10;
 	    
-	    &.category-line-up, &.category-news, &.category-feature{
-		    background-image: url('http://www.farmfestival.co.uk/wp-content/uploads/2016/02/Lanterns_farmfest2016_2-1.jpg') !important;
-	    }
-	    
-/*
 	    .single__title__wrapper{
 	    	position: absolute;
 			bottom: 20px;
@@ -1407,185 +918,33 @@
 		    }
 	    
 	    }
-*/
 	    
 	}
-
 	
-	#single__wrapper{
+	.single__wrapper{
 		@include width-desktop();
 		margin-top: 20px;
 		font-size: calc(#{$small});
 		line-height: calc(#{$small + 4});
 		overflow: auto;
-		z-index: 10;
 		
 		.single__image{
-			display: none;
-			
+			margin-bottom: 20px;
 			img{
 				width: 100%;
 				height: auto;
 				display: block;
-				margin-top: -55px;
 			}
-			.single__title{
-				position: absolute;
-				bottom: 0px;
-				
-				h1{
-					color: $primary-colour;
-					font-size: $medium;
-				}
-			}
-		}
-		
-		&.category-news, &.category-feature{
-			margin-top: -150px;
-			
-			.single__title{
-				display: none;
-			}
-			
-			.single__menu{
-				width: 260px;
-				height: 300px;
-				margin-top: -103px;
-				
-				.next-previous{
-					&.line-up-next{
-						display: none;
-					}
-					
-					&.news-next{
-						display: block;
-					}
-					
-					svg{
-						path{
-							fill: $primary-colour;
-						}
-					}	
-				}
-				
-				.menu{
-					display: none;
-					}
-			}
-			
-			.single__image{
-			width: 600px;
-			margin-bottom: 20px;
-			position: relative;
-			min-height: 40px;
-			margin-left: 260px;
-			height: 250px;
-			overflow: hidden;
-			display: block;
-			}
-
-		}
-		
-		&.category-feature{
-			.single__image{
-			width: 600px;
-			margin-bottom: 20px;
-			position: relative;
-			min-height: 40px;
-			margin-left: 260px;
-			height: 340px;
-			overflow: hidden;
-			display: block;
-			}
-			
-			.single__menu{
-				margin-top: -193px;
-			}
-		}
-		
-		
-		&.category-line-up{
-			margin-top: -150px;
-			
-			.single__image{
-			width: 600px;
-			margin-bottom: 20px;
-			position: relative;
-			min-height: 40px;
-			margin-left: 260px;
-			height: 250px;
-			overflow: hidden;
-			display: block;
-			}
-			
-			.single__menu{
-				width: 260px;
-				height: 300px;
-				margin-top: -103px;
-				
-				.next-previous{
-					&.news-next{
-						display: none;
-					}
-					
-					&.line-up-next{
-						display: block;
-					}
-					
-					svg{
-						path{
-							fill: $primary-colour;
-						}
-					}	
-				}
-				
-				
-				.menu{
-					display: none;
-					}
-			}
-			
-			.single__title{
-				top:10px;
-				bottom: auto;
-				left: 10px;
-				
-				h1{
-					color: $primary-colour;
-					font-size: $medium;
-				}
-			}	
-		}
-		
-		&.page{
-			
-			.single__title{
-				display: none;
-			}
-			
-			.single__menu{
-				.next-previous{
-					display: none;
-				}
-			}	
 		}
 		
 		.single__menu{
-			width: 282px;
+			width: 200px;
 			float: left;
-
+			
 			ul{
 				li{
-					@include type(calc(#{$medium}));
+					@include type(calc(#{$large}));
 					margin-top: 10px;
-					text-transform: uppercase;
-					
-					&.current-menu-item{
-						a{
-							color: $grey;
-						}
-					}
-					
 					
 					a{
 						font-style: normal;
@@ -1605,76 +964,23 @@
 			width: 600px;
 			float: left;
 			margin-bottom: 20px;
-			padding-top: 8px;
-			
-			h1{
-				font-size: $medium;
-				line-height: $medium;
-				margin-bottom: 20px;
-				margin-top: 20px;
-				color: $primary-colour;
-				
-				&:first-of-type{
-					margin-top: 0px;
-				}
-			}
-			
-			h2{
-				font-family: 'Libre Baskerville', serif;
-				font-size: $base;
-				line-height: calc(#{$regular});
-				font-style: italic;
-				margin-top: -15px;
-				margin-bottom: 20px;
-				color: #383838;
-			}
-			
-			blue{
-				color: #302784 !important;
-			}
-			
-			em{
-				font-style: italic;
-			}
-			
-			strong{
-				font-weight: 700;
-			}
-			
-			p{
-				color: $black;
-			    font-size: $small;
-				line-height: $sub-med;
-			}
-			
-			a{
-				color: $primary-colour;
-			}
-			
-			iframe{
-				margin-top: 20px;
-			}
 			
 			ul{
-				margin-top: -6px;
+				margin-top: 20px;
 				margin-bottom: 20px;
 			}
 			
 			li{
-				font-family: 'Libre Baskerville', serif;
-				font-size: $small;
-				line-height: $sub-med;
-				list-style: disc;
+				list-style: url('http://localhost/wp-content/uploads/2016/01/lightening.png');
+				@include type(calc(#{$medium}));
+				color: $primary-colour;
 				margin-top: 5px;
-				list-style-position: outside;
-				margin-left: 20px;
-				color: $black;
 			}
 			
 			img{
 				width: 100%;
 				height: auto;
-				margin: 10px 0px 10px 0px;
+				margin: 10px 0px 0px 0px;
 			}
 			
 			.wp-caption-text{
@@ -1684,150 +990,30 @@
 			
 			blockquote{
 				margin-top: 10px;
-				margin-left: -55px;
+				margin-left: -175px;
 				
 				p{
-					font-family: 'Libre Baskerville', serif;
-					font-size: $base;
+					@include type(calc(#{$large}));
 					color: $primary-colour;
 					margin-bottom: 30px;
 					margin-top: 5px;
-					line-height: calc(#{$sub-med});
-					margin-bottom: 0px;
-				}
-				
-				strong{
-					@include type(calc(#{$small}));
-					margin-top: 10px;
-					text-transform: uppercase;
-					line-height: 36px;
-					// margin-left: -16px;
+					line-height: calc(#{$large})
 				}
 				
 				&:before{
-					margin-bottom: 20px;
-				}
-				
-				&:after{
-					margin-top: 10px;
-				}
-				
-				&:before, &:after{
-					content:"";
-					display: block;
-					width: 200px;
-					background-color: $primary-colour;
-					height: 2px;
-					margin-left: -15px;
+					content: url('http://localhost/wp-content/uploads/2016/01/lightening_quote.png');
+					margin-right: 20px;
 				}
 			}
 		}
 		
-	}
-	
-	//manifesto
-	
-	.manifesto{
-		position: absolute;
-		bottom: 130px;
-		z-index: 10;
-		width: 100%;
-		text-align: center;
-		@include type($medium);
-		cursor: pointer;
-		text-transform: uppercase;
-		-webkit-transition: all $animation-speed ease-in;
-		-moz-transition: all $animation-speed ease-in;
-		-o-transition: all $animation-speed ease-in;
-		transition: all $animation-speed ease-in;
-		
-		&:hover{
-			h2{
-				text-decoration: underline;
-			}
-		}
-		
-	}
-	
-	.manifesto__wrapper{
-		background-color: $color-opacity;
-		height: 100vh;
-		position: fixed;
-		width: 100%;
-		z-index: 8000000;
-		display: none;
-		
-		&.display{
-			display: block;
-		}
-		
-		.manifesto__close{
-			position: absolute;
-			right: 40px;
-			top:40px;
-			cursor: pointer;
-			
-			svg{
-				width: 40px;
-				height: 40px;
-			}
-			
-		}
-		
-		.manifesto__container{
-			margin-left: auto;
-			margin-right: auto;
-			width: 400px;
-			color: white;
-			text-align: center;
-			margin-top: 200px;
-			
-			h1{
-				
-				font-size: $large;
-				margin-bottom: 20px;
-				
-			}
-			
-			p{
-				line-height: $regular;
-			}
-			
-			h2{
-				margin-bottom: 20px;
-			}
-			
-			a{
-				font-size: $small;
-				margin-top: 20px;
-			}
-		}
-	}
-	
-	.ethos{
-		.single__menu{
-			&.desktop{
-				.menu{
-					visibility: hidden;
-				}
-			}
-		}
-	}
-		
+	}	
 	//this sets the height of the offset on the individual pages
-	.tickets{
-		padding-top: 100px;
+	.line-up, .latest, .tickets{
+		padding-top: 130px;
 		
 		.desktop{
-			margin-top: -100px;
-		}
-	}
-	
-	.line-up, .latest{
-		padding-top: 170px;
-		
-		.desktop{
-			margin-top: -170px;
+			margin-top: -130px;
 		}
 	}	
 }	

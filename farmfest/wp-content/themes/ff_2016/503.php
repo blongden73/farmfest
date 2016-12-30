@@ -70,7 +70,7 @@
 	<h1>Farmfest 2016</h1>
 	<h1>Freshening up...</h1>
 	<h2>If you came here to get tickets you still can</h2>
-	<button>Buy Tickets</button>
+	<a href="https://farmfestival.eventcube.io/"><button>Buy Tickets</button></a>
 	</div>
 	</div>
 </body>

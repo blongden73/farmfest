@@ -3,7 +3,7 @@
  * Template Name: Tickets
  */
 ?>
-<?php get_header() ?>
+<?php get_header('tickets') ?>
 <?php get_template_part('illustration__panel__tickets') ?>
 
 <?php if( have_rows('tickets__provider') ): ?>
@@ -111,6 +111,35 @@
 		</div>	
 	</div>
 <?php endif; ?>
+<div class="col1 tickets_small_print">
+	<p>Adult Ticket = over 18.
+Under 18s need to be accompanied by a paying adult. No more than 4 x under 18s per adult.
+Family Ticket = 2 x Adult tickets + 2 x 13-17 years tickets</p>
+<p>
+—
+</p>
+<p>
+All tickets includes camping and parking.
+</p>
+<p>
+—
+</p>
+<p>
+For ticketing issues please go <a href="http://www.farmfestival.co.uk/ticketing-issues/">here</a>
+</p>
+<p>
+—
+</p>
+<p>
+Tickets are none refundable.	
+</p>
+<p>
+Physical Tickets now on sale at:
+Bristol Ticket Shop /// 41 High St, Bristol, BS1 2AT
+Frome Cheese & Grain /// Market Yard, Frome, Somerset, BA11 1BE
+Bruton Post Office /// 14 Patwell St, Bruton BA10 0EQ
+</p>
+</div>
 <?php rewind_posts(); ?>
 
 
